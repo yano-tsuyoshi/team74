@@ -13,6 +13,7 @@
         {{ csrf_field() }}
         1.カレンダーから日付を選択してください<br>
         <input type="text" id="date_val" name="date"><br>
+        <!-- input type="date" にする-->
         <div id="datepicker"></div><br>
 
         2.時間帯を選択してください<br>
@@ -36,12 +37,6 @@
             <option value="2">鍼灸コース 1時間</option>
             <option value="3">マッサージコース 30分</option>
             <option value="4">マッサージコース 1時間</option>
-        </select><br><br>
-        4.施術時間を選択してください<br>
-        <select name="course_time">
-            <option value="1">30分</option>
-            <option value="2">1時間</option>
-            <option value="3">1時間半</option>
         </select><br><br>
 
         5.ご希望の施術スタッフを選択してください<br>

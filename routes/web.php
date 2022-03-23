@@ -20,5 +20,5 @@ Route::get('/', function () {
 });
 
 // 予約画面
-Route::get('/index', [ReserveController::class, 'index']);
-Route::post('/reserve', [ReserveController::class, 'store']);
+Route::get('reserve', [ReserveController::class, 'index']);
+Route::post('reserve', [ReserveController::class, 'store']);

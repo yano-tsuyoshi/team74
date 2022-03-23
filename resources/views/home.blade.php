@@ -29,14 +29,14 @@
             ログイン
         </div>
         <div class="btn">
-            <a href="\reserve">予約する</a>
+            <a href="reserve">予約する</a>
         </div>
 
         <div class="btn">
             管理者専用ログイン
         </div>
         <div class="btn">
-            <a href="\reserve_list">管理者用：予約一覧</a>
+            <a href="reserve_list">管理者用：予約一覧</a>
         </div>
     </body>
 </html>

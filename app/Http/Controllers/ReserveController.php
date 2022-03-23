@@ -8,6 +8,7 @@ use App\Models\reserve;
 
 class ReserveController extends Controller
 {
+    // 予約ページ表示
     public function index(Request $request)
     {
         return view('reserves\reserve');
@@ -35,6 +36,6 @@ class ReserveController extends Controller
             'comment' => $request->comment,
         ]);
 
-        return redirect('\home');
+        return redirect('home');
     }
 }
