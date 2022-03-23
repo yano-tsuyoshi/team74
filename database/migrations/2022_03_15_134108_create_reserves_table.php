@@ -19,8 +19,8 @@ class CreateReservesTable extends Migration
             $table->date('date');
             $table->time('time');
             $table->integer('course_id');
-            $table->integer('staff_id');
-            $table->string('comment')->length('1000')->charset('utf8');
+            $table->integer('staff_id')->nullable(false);
+            $table->string('comment', 1000)->nullable(true)->charset('utf8');
             $table->timestamps();
         });
     }

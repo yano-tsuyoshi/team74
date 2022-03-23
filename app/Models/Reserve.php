@@ -10,5 +10,5 @@ class Reserve extends Model
     use HasFactory;
 
     protected $fillable = ['id', 'user_id', 'date', 'time', 'course_id', 'staff_id', 'comment'];
-    public $timestamps = false;
+    public $timestamps = false; // もしtimestampsが必要ならこの行を消す
 }

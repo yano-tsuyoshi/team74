@@ -15,7 +15,7 @@ class CreateStaffsTable extends Migration
     {
         Schema::create('staffs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->length('100')->charset('utf8');
+            $table->string('name', 50)->charset('utf8');
             $table->timestamps();
         });
     }
