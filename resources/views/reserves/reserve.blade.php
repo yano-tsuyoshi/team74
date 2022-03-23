@@ -11,7 +11,10 @@
     <b>予約フォーム</b><br>
     <form method="POST" action="{{ url('reserve') }}">
         {{ csrf_field() }}
-        1.カレンダーから日付を選択してください<br>
+        0.ユーザーID
+        <input type="text" name="user_id"><br>
+
+        1.カレンダーから日付を選択してください<br>        
         <input type="text" id="date_val" name="date"><br>
         <!-- input type="date" にする-->
         <div id="datepicker"></div><br>
@@ -31,7 +34,7 @@
         </select><br><br>
 
         3.コースを選択してください<br>
-        <select name="course">
+        <select name="course_id">
             <option value="">選択してください</option>
             <option value="1">鍼灸コース 30分</option>
             <option value="2">鍼灸コース 1時間</option>
@@ -40,7 +43,7 @@
         </select><br><br>
 
         5.ご希望の施術スタッフを選択してください<br>
-        <select name="staff">
+        <select name="staff_id">
             <option value="">選択してください</option>
             <option value="1">田中</option>
             <option value="2">高橋</option>
