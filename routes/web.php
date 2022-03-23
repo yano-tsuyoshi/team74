@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReserveController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// ホーム画面
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+// 予約画面
+Route::get('/index', [ReserveController::class, 'index']);
+Route::post('/reserve', [ReserveController::class, 'store']);
