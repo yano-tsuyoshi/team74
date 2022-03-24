@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStaffsTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +14,8 @@ class CreateStaffsTable extends Migration
     public function up()
     {
         Schema::create('staffs', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name', 50)->charset('utf8');
-            $table->timestamps();
+            $table->increments('id')->comment('');
+            $table->string('name')->comment('担当者名');
         });
     }
 
@@ -29,4 +28,4 @@ class CreateStaffsTable extends Migration
     {
         Schema::dropIfExists('staffs');
     }
-}
+};
