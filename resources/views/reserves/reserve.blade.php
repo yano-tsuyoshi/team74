@@ -12,6 +12,9 @@
     <form method="POST" action="{{ url('reserve') }}">
         {{ csrf_field() }}
         <input type="hidden" value="1" name="user_id"><br>
+        <input type="hidden" value="予約テスト太郎" name="name"><br>
+        <input type="hidden" value="鍼灸テスト二郎" name="staff"><br>
+        <input type="hidden" value="何らかのコース" name="course"><br>
 
         1.カレンダーから日付を選択してください<br>        
         <input type="text" id="date_val" name="date"><br>

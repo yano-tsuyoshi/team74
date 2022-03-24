@@ -15,7 +15,7 @@ use App\Http\Controllers\ReserveController;
 */
 
 // ホーム画面
-Route::get('/', function () {
+Route::get('home', function () {
     return view('home');
 });
 

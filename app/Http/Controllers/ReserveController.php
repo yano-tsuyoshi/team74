@@ -44,11 +44,15 @@ class ReserveController extends Controller
         // 予約データ作成
         Reserve::create([
             'user_id' => $request->user_id,
+            'staff_id' => $request->staff_id,
+            'course_id' => $request->course_id,
+            'name' => $request->name,
+            'staff' => $request->staff,
             'date' => $request->date,
             'time' => $request->time,
-            'course_id' => $request->course_id,
+            'course' => $request->course,
             'staff_id' => $request->staff_id,
-            'comment' => $request->comment,
+            'detail' => $request->detail,
         ]);
 
         return redirect('home');
