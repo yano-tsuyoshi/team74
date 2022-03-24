@@ -11,7 +11,7 @@
                     <li> <a href="">案内</a></li>
                     <li><a href="">施術コース</a></li>
                     <li>  <a href="">料金</a></li>
-                    <li>  <a href="">予約</a></li>
+                    <li>  <a href="reserve">予約</a></li>
                 </ul>
             </div>
         </div>

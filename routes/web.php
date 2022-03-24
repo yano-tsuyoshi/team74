@@ -15,11 +15,18 @@ use App\Http\Controllers\ReserveController;
 */
 
 // ホーム画面
+Route::get('/', function () {
+    return view('teams/index');
+});
+
 Route::get('home', function () {
     return view('home');
 });
 
-// 予約画面
+// 予約登録画面
 Route::get('user/{id}', [ReserveController::class, 'show']);
 Route::get('reserve', [ReserveController::class, 'index']);
 Route::post('reserve', [ReserveController::class, 'store']);
+
+// 予約一覧画面
+Route::post('reserve', [ReserveController::class, 'list']);
