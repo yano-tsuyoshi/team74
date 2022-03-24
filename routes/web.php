@@ -14,8 +14,12 @@ use App\Http\Controllers\ReserveController;
 |
 */
 
+<<<<<<< HEAD
 // ホーム画面
 Route::get('home', function () {
+=======
+Route::get('/', function () {
+>>>>>>> 6340e5df3d0bab5cef1b1a0b7bc99d4558224119
     return view('home');
 });
 
