@@ -8,10 +8,16 @@ use App\Models\reserve;
 
 class ReserveController extends Controller
 {
+    // 予約一覧表示
+    public function list(Request $request)
+    {
+        return view('reserves\reserve_list');
+    }
+
     // 予約ページ表示
     public function index(Request $request)
     {
-        return view('reserves\reserve');
+        return view('reserves\reserve_page');
     }
 
         /**
@@ -23,7 +29,7 @@ class ReserveController extends Controller
     public function show(Request $request, $id)
     {
         $user_id = User::select('id')->find($id);
-        return view('reserves\reserve', [
+        return view('reserves\reserve_page', [
             'id' => $user_id,
         ]);
     }
