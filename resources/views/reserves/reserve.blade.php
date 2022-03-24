@@ -53,7 +53,7 @@
         </select>
         <br><br>
         6.その他ご要望があればご記入ください<br>
-        <input type="text" value="" name="comment">
+        <input type="text" value="" name="detail">
         <br><br>
         <input type="submit" value="予約する" class="submit">
     </form>
