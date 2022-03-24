@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use App\Models\User;
+use App\Models\User;
 use App\Models\reserve;
 
 class ReserveController extends Controller
@@ -14,6 +14,20 @@ class ReserveController extends Controller
         return view('reserves\reserve');
     }
 
+        /**
+     * ユーザーIDを1件取得
+     * 
+     * @param Request $request
+     * @return Response
+     */
+    public function show(Request $request, $id)
+    {
+        $user_id = User::select('id')->find($id);
+        return view('reserves\reserve', [
+            'id' => $user_id,
+        ]);
+    }
+
     /**
      * 予約データ登録
      * 
@@ -22,6 +36,7 @@ class ReserveController extends Controller
      */
     public function store(Request $request)
     {
+        
         $this->validate($request, [
             'comment' => 'required|max:1000',
         ]);

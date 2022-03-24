@@ -20,5 +20,6 @@ Route::get('home', function () {
 });
 
 // 予約画面
+Route::get('user/{id}', [ReserveController::class, 'show']);
 Route::get('reserve', [ReserveController::class, 'index']);
 Route::post('reserve', [ReserveController::class, 'store']);

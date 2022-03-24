@@ -11,8 +11,7 @@
     <b>予約フォーム</b><br>
     <form method="POST" action="{{ url('reserve') }}">
         {{ csrf_field() }}
-        0.ユーザーID
-        <input type="text" name="user_id"><br>
+        <input type="hidden" value="1" name="user_id"><br>
 
         1.カレンダーから日付を選択してください<br>        
         <input type="text" id="date_val" name="date"><br>
@@ -51,7 +50,7 @@
         </select>
         <br><br>
         6.その他ご要望があればご記入ください<br>
-        <input type="text" name="comment">
+        <input type="text" value="" name="comment">
         <br><br>
         <input type="submit" value="予約する" class="submit">
     </form>
