@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('staffs', function (Blueprint $table) {
             $table->increments('id')->comment('');
-            $table->string('name')->comment('担当者名');
+            $table->string('name')->length('20')->comment('担当者名');
         });
     }
 

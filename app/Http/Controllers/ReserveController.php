@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\reserve;
+use App\Models\Staff;
+use App\Models\Course;
+use App\Models\Reserve;
 
 class ReserveController extends Controller
 {
@@ -20,17 +22,45 @@ class ReserveController extends Controller
         return view('reserves\reserve_page');
     }
 
-        /**
+    /**
      * ユーザーIDを1件取得
      * 
      * @param Request $request
      * @return Response
      */
-    public function show(Request $request, $id)
+    public function selectUser(Request $request, $id)
     {
         $user_id = User::select('id')->find($id);
         return view('reserves\reserve_page', [
             'id' => $user_id,
+        ]);
+    }
+
+    /**
+     * スタッフ一覧を取得
+     * 
+     * @param Request $request
+     * @return Response
+     */
+    public function selectStaff(Request $request, $id)
+    {
+        $staff_name = Staff::select('name')->find($id);
+        return view('reserves\reserve_page', [
+            'id' => $staff_name,
+        ]);
+    }
+
+        /**
+     * コース一覧を取得
+     * 
+     * @param Request $request
+     * @return Response
+     */
+    public function selectCourse(Request $request, $id)
+    {
+        $course_name = Course::select('course_name')->find($id);
+        return view('reserves\reserve_page', [
+            'id' => $course_name,
         ]);
     }
 
@@ -42,7 +72,7 @@ class ReserveController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $this->validate($request, [
             'comment' => 'required|max:1000',
         ]);
@@ -61,6 +91,6 @@ class ReserveController extends Controller
             'detail' => $request->detail,
         ]);
 
-        return redirect('home');
+        return redirect('/');
     }
 }

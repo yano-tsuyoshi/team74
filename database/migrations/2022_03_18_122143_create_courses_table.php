@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->increments('id')->comment('');
-            $table->string('course_name')->comment('コース名');
-            $table->string('course_detail')->comment('コース内容');
-            $table->string('course_time')->comment('コース時間');
-            $table->string('price')->comment('コース料金');
+            $table->string('name')->length('20')->comment('コース名');
+            $table->string('detail')->length('50')->comment('コース内容');
+            $table->unsignedBigInteger('time')->comment('コース時間');
+            $table->unsignedBigInteger('price')->comment('コース料金');
         });
     }
 

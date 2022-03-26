@@ -11,10 +11,9 @@
     <b>予約フォーム</b><br>
     <form method="POST" action="{{ url('reserve') }}">
         {{ csrf_field() }}
-        <input type="hidden" value="1" name="user_id"><br>
-        <input type="hidden" value="予約テスト太郎" name="name"><br>
-        <input type="hidden" value="鍼灸テスト二郎" name="staff"><br>
-        <input type="hidden" value="何らかのコース" name="course"><br>
+        <input type="text" value="<?php echo $user_id->id; ?>" name="name">
+        <input type="text" value="<?php echo $staff_name->name; ?>" name="staff">
+        <input type="text" value="<?php echo $course_name->name; ?>" name="course">
 
         1.カレンダーから日付を選択してください<br>        
         <input type="text" id="date_val" name="date"><br>

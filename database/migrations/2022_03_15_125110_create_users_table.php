@@ -15,12 +15,12 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->comment('名前');
+            $table->string('name')->length('50')->comment('名前');
             $table->date('birthday')->comment('生年月日');
-            $table->string('address')->comment('住所');
-            $table->string('tel')->comment('電話番号');
-            $table->string('email')->comment('メールアドレス');
-            $table->string('password')->comment('パスワード');
+            $table->string('address')->length('128')->comment('住所');
+            $table->unsignedBigInteger('tel')->comment('電話番号');
+            $table->string('email')->length('50')->comment('メールアドレス');
+            $table->string('password')->length('50')->comment('パスワード');
         });
     }
 
