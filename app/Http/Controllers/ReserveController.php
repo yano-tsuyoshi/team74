@@ -22,47 +22,47 @@ class ReserveController extends Controller
         return view('reserves\reserve_page');
     }
 
-    /**
-     * ユーザーIDを1件取得
-     * 
-     * @param Request $request
-     * @return Response
-     */
-    public function selectUser(Request $request, $id)
-    {
-        $user_id = User::select('id')->find($id);
-        return view('reserves\reserve_page', [
-            'id' => $user_id,
-        ]);
-    }
+    // /**
+    //  * ユーザーIDを1件取得
+    //  * 
+    //  * @param Request $request
+    //  * @return Response
+    //  */
+    // public function selectUser(Request $request, $id)
+    // {
+    //     $user_id = User::select('id')->find($id);
+    //     return view('reserves\reserve_page', [
+    //         'id' => $user_id,
+    //     ]);
+    // }
 
-    /**
-     * スタッフ一覧を取得
-     * 
-     * @param Request $request
-     * @return Response
-     */
-    public function selectStaff(Request $request, $id)
-    {
-        $staff_name = Staff::select('name')->find($id);
-        return view('reserves\reserve_page', [
-            'id' => $staff_name,
-        ]);
-    }
+    // /**
+    //  * スタッフ一覧を取得
+    //  * 
+    //  * @param Request $request
+    //  * @return Response
+    //  */
+    // public function selectStaff(Request $request, $id)
+    // {
+    //     $staff_name = Staff::select('name')->find($id);
+    //     return view('reserves\reserve_page', [
+    //         'id' => $staff_name,
+    //     ]);
+    // }
 
-        /**
-     * コース一覧を取得
-     * 
-     * @param Request $request
-     * @return Response
-     */
-    public function selectCourse(Request $request, $id)
-    {
-        $course_name = Course::select('course_name')->find($id);
-        return view('reserves\reserve_page', [
-            'id' => $course_name,
-        ]);
-    }
+    //     /**
+    //  * コース一覧を取得
+    //  * 
+    //  * @param Request $request
+    //  * @return Response
+    //  */
+    // public function selectCourse(Request $request, $id)
+    // {
+    //     $course_name = Course::select('course_name')->find($id);
+    //     return view('reserves\reserve_page', [
+    //         'id' => $course_name,
+    //     ]);
+    // }
 
     /**
      * 予約データ登録
@@ -87,10 +87,9 @@ class ReserveController extends Controller
             'date' => $request->date,
             'time' => $request->time,
             'course' => $request->course,
-            'staff_id' => $request->staff_id,
             'detail' => $request->detail,
         ]);
 
-        return redirect('/');
+        return redirect('teams/index');
     }
 }

@@ -11,13 +11,13 @@
     <b>予約フォーム</b><br>
     <form method="POST" action="{{ url('reserve') }}">
         {{ csrf_field() }}
-        <input type="text" value="<?php echo $user_id->id; ?>" name="name">
-        <input type="text" value="<?php echo $staff_name->name; ?>" name="staff">
-        <input type="text" value="<?php echo $course_name->name; ?>" name="course">
+        <input type="hidden" value="1" name="user_id">
+        <input type="hidden" value="予約テス太郎" name="name">
+        <input type="hidden" value="鍼灸テス次郎" name="staff">
+        <input type="hidden" value="何かのコース" name="course">
 
         1.カレンダーから日付を選択してください<br>        
         <input type="text" id="date_val" name="date"><br>
-        <!-- input type="date" にする-->
         <div id="datepicker"></div><br>
 
         2.時間帯を選択してください<br>

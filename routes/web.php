@@ -20,9 +20,9 @@ Route::get('/', function () {
 });
 
 // 予約登録画面
-Route::get('user', [ReserveController::class, 'selectUser']);
-Route::get('staff', [ReserveController::class, 'selectStaff']);
-Route::get('course', [ReserveController::class, 'selectCourse']);
+// Route::get('user', [ReserveController::class, 'selectUser']);
+// Route::get('staff', [ReserveController::class, 'selectStaff']);
+// Route::get('course', [ReserveController::class, 'selectCourse']);
 Route::get('reserve', [ReserveController::class, 'index']);
 Route::post('reserve', [ReserveController::class, 'store']);
 
