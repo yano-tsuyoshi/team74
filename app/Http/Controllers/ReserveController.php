@@ -74,7 +74,7 @@ class ReserveController extends Controller
     {
 
         $this->validate($request, [
-            'comment' => 'required|max:1000',
+            'detail' => 'required|max:1000',
         ]);
 
         // 予約データ作成
