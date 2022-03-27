@@ -11,10 +11,10 @@ use App\Models\Reserve;
 class ReserveController extends Controller
 {
     // 予約一覧表示
-    public function list(Request $request)
-    {
-        return view('reserves\reserve_list');
-    }
+    // public function list(Request $request)
+    // {
+    //     return view('reserves\reserve_list');
+    // }
 
     // 予約ページ表示
     public function index(Request $request)
@@ -90,6 +90,6 @@ class ReserveController extends Controller
             'detail' => $request->detail,
         ]);
 
-        return redirect('teams/index');
+        return redirect('/');
     }
 }

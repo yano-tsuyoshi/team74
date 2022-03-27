@@ -11,12 +11,12 @@
     <b>予約フォーム</b><br>
     <form method="POST" action="{{ url('reserve') }}">
         {{ csrf_field() }}
-        <input type="hidden" value="1" name="user_id">
-        <input type="hidden" value="予約テス太郎" name="name">
-        <input type="hidden" value="鍼灸テス次郎" name="staff">
-        <input type="hidden" value="何かのコース" name="course">
+        ユーザーID<input type="text" value="1" name="user_id"><br>
+        予約者名<input type="text" value="予約テス太郎" name="name"><br>
+        施術スタッフ<input type="text" value="鍼灸テス次郎" name="staff"><br>
+        コース名<input type="text" value="何かのコース" name="course"><br>
 
-        1.カレンダーから日付を選択してください<br>        
+        1.カレンダーから日付を選択してください<br>
         <input type="text" id="date_val" name="date"><br>
         <div id="datepicker"></div><br>
 
