@@ -25,7 +25,6 @@ return new class extends Migration
             $table->string('staff')->comment('担当スタッフ');
             $table->text('detail')->nullable()->comment('メモ');
             $table->timestamps();
-            
         });
     }
 
