@@ -18,12 +18,12 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id')->comment('ユーザーID');
             $table->unsignedBigInteger('staff_id')->comment('スタッフID');
             $table->unsignedBigInteger('course_id')->comment('コースID');
-            $table->string('name')->length('50')->comment('予約者名');
-            $table->string('staff')->length('20')->comment('担当スタッフ');
+            $table->string('name')->comment('予約者名');
             $table->date('date')->comment('予約日');
-            $table->time('time')->comment('予約時間');
-            $table->string('course')->length('20')->comment('コース名');
-            $table->text('detail')->nullable()->length('1000')->comment('メモ');
+            $table->time('time')->comment('予約時間');            
+            $table->string('course')->comment('コース名');
+            $table->string('staff')->comment('担当スタッフ');
+            $table->text('detail')->nullable()->comment('メモ');
             $table->timestamps();
         });
     }
