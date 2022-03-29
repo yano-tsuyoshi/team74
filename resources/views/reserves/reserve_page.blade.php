@@ -11,10 +11,10 @@
 <b>予約フォーム</b><br>
 <form method="POST" action="{{ url('reserve') }}">
     {{ csrf_field() }}
-    ユーザーID<input type="text" value="<?php echo $user->id; ?>" name="user_id"><br>
-    予約者名<input type="text" value="<?php echo $user->name; ?>" name="name"><br>
-    施術スタッフ<input type="text" value="鍼灸テス次郎" name="staff"><br>
-    コース名<input type="text" value="何かのコース" name="course"><br>
+    <p>
+        ユーザーID：<?php echo $user->id; ?><br>
+        予約者名：<?php echo $user->name; ?>
+    </p><br>
 
     1.カレンダーから日付を選択してください<br>
     <input type="text" id="date_val" name="date"><br>
