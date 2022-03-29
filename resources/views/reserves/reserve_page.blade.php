@@ -56,7 +56,10 @@
         <option value="2">高橋</option>
         <option value="3">鈴木</option>
 
-        
+        <!-- TODO: ここの3行を消したら予約システム（仮）動作します -->
+        @foreach ($staffs as $staff)
+        <div>{{ $staff->name }}</div>
+        @endforeach
 
     </select>
     <br><br>
