@@ -25,11 +25,11 @@ class ReserveController extends Controller
         // $user = \Auth::user(); // userデータはAuthでゲットするのがセオリー
         // $user = User::select('id', 'name')->find($id);
 
-        // $staff = Staff::first();
+        $staff = Staff::first();
         // $course = Course::first();
         return view('reserves\reserve_page', [
             'user' => $user,
-            // 'staff' => $staff,
+            'staff' => $staff,
             // 'course' => $course,
         ]);
     }
@@ -46,20 +46,6 @@ class ReserveController extends Controller
     //     dd($user);
     //     return view('reserves\reserve_page', [
     //         'user' => $user,
-    //     ]);
-    // }
-
-    // /**
-    //  * スタッフ一覧を取得
-    //  * 
-    //  * @param Request $request
-    //  * @return Response
-    //  */
-    // public function selectStaff(Request $request, $id)
-    // {
-    //     $staff = Staff::select('name')->find($id);
-    //     return view('reserves\reserve_page', [
-    //         'id' => $staff,
     //     ]);
     // }
 
@@ -93,13 +79,11 @@ class ReserveController extends Controller
         // 予約データ作成
         Reserve::create([
             'user_id' => $request->user_id,
-            'staff_id' => $request->staff_id,
-            'course_id' => $request->course_id,
             'name' => $request->name,
-            'staff' => $request->staff,
             'date' => $request->date,
             'time' => $request->time,
-            'course' => $request->course,
+            'course_id' => $request->course_id,
+            'staff_id' => $request->staff_id,
             'detail' => $request->detail,
         ]);
 

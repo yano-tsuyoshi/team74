@@ -1,10 +1,13 @@
+@extends('layouts.app')
+
+@section('content')
+
 <head>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css">
 </head>
 
-<!-- 1. 別のテーブルからデータ引っ張ってくる機構 -->
 <!-- 2. フォームの見た目 -->
 <!-- 3. 時間あるなら予約データ編集・削除機能 -->
 
@@ -14,6 +17,9 @@
     <p>
         ユーザーID：<?php echo $user->id; ?><br>
         予約者名：<?php echo $user->name; ?>
+
+        <input type="hidden" value="<?php echo $user->id; ?>" name="user_id">
+        <input type="hidden" value="<?php echo $user->name; ?>" name="name">
     </p><br>
 
     1.カレンダーから日付を選択してください<br>
@@ -46,9 +52,12 @@
     5.ご希望の施術スタッフを選択してください<br>
     <select name="staff_id">
         <option value="">選択してください</option>
-        <option value="1">田中</option>
+        <option value="<?php echo $staff->id; ?>"><?php echo $staff->name; ?></option>
         <option value="2">高橋</option>
         <option value="3">鈴木</option>
+
+        
+
     </select>
     <br><br>
     6.その他ご要望があればご記入ください<br>
