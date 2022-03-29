@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('staffs', function (Blueprint $table) {
-            $table->increments('id')->comment('');
+            $table->increments('id');
             $table->string('name')->comment('担当者名');
         });
     }

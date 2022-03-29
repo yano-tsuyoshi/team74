@@ -8,6 +8,8 @@ use App\Models\Staff;
 use App\Models\Course;
 use App\Models\Reserve;
 
+use Facade\FlareClient\Http\Response;
+
 class ReserveController extends Controller
 {
     // 予約一覧表示
@@ -19,20 +21,31 @@ class ReserveController extends Controller
     // 予約ページ表示
     public function index(Request $request)
     {
-        return view('reserves\reserve_page');
+        $user = User::first(); // テスト
+        // $user = \Auth::user(); // userデータはAuthでゲットするのがセオリー
+        // $user = User::select('id', 'name')->find($id);
+
+        // $staff = Staff::first();
+        // $course = Course::first();
+        return view('reserves\reserve_page', [
+            'user' => $user,
+            // 'staff' => $staff,
+            // 'course' => $course,
+        ]);
     }
 
-    // /**
-    //  * ユーザーIDを1件取得
-    //  * 
-    //  * @param Request $request
-    //  * @return Response
-    //  */
-    // public function selectUser(Request $request, $id)
+    /**
+     * ユーザーID・ユーザー名を1件取得
+     * 
+     * @param Request $request
+     * @return Response
+     */
+    // public function show(Request $request, $id)
     // {
-    //     $user_id = User::select('id')->find($id);
+    //     $user = User::select('id', 'name')->find($id);
+    //     dd($user);
     //     return view('reserves\reserve_page', [
-    //         'id' => $user_id,
+    //         'user' => $user,
     //     ]);
     // }
 
@@ -44,9 +57,9 @@ class ReserveController extends Controller
     //  */
     // public function selectStaff(Request $request, $id)
     // {
-    //     $staff_name = Staff::select('name')->find($id);
+    //     $staff = Staff::select('name')->find($id);
     //     return view('reserves\reserve_page', [
-    //         'id' => $staff_name,
+    //         'id' => $staff,
     //     ]);
     // }
 

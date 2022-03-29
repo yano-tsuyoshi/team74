@@ -10,5 +10,5 @@ class Course extends Model
     use HasFactory;
 
     protected $fillable = ['id', 'name', 'detail', 'time', 'price'];
-    public $timestamps = true;
+    public $timestamps = false;
 }

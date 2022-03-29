@@ -10,5 +10,5 @@ class Staff extends Model
     use HasFactory;
 
     protected $fillable = ['id', 'name'];
-    public $timestamps = true;
+    public $timestamps = false;
 }
