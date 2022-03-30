@@ -2,8 +2,6 @@
  
 @section('content')
  
-{{ asset('img/logo-twitterblue.svg') }}
-
-{{ url('img', ['logo-twitterblue.svg']) }}
+テスト
 
 @endsection

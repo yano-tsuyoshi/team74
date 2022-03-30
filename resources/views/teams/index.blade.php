@@ -16,10 +16,9 @@
         </div>
         <div class="main">
             <div class="main-header">
-                <button type="button">新規登録</button>
-                <button type="button">ログイン</button>
+                
             </div>
         </div>    
     </div>
-    
+
 @endsection

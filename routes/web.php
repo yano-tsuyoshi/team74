@@ -15,7 +15,7 @@ use App\Http\Controllers\ReserveController;
 */
 
 // ホーム画面
-Route::get('/', function () {
+Route::get('/top', function () {
     return view('teams/index');
 });
 
@@ -30,3 +30,7 @@ Route::post('reserve', [ReserveController::class, 'store']);
 // 予約一覧画面
 // Route::get('reserve', [ReserveController::class, 'list']);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
