@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReserveController;
+use App\Http\Controllers\StaffController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,13 +21,12 @@ Route::get('/', function () {
 });
 
 // 予約登録画面
-Route::get('user', [ReserveController::class, 'show']);
+Route::get('user', [ReserveController::class, 'userShow']);
 
 Route::get('staff', [StaffController::class, 'indexStaff']);
-// Route::get('staff', [ReserveController::class, 'selectStaff']);
-// Route::get('course', [ReserveController::class, 'selectCourse']);
-Route::get('reserve', [ReserveController::class, 'index']);
-Route::post('reserve', [ReserveController::class, 'store']);
+// Route::get('course', [ReserveController::class, 'indexCourse']);
+Route::get('reserve', [ReserveController::class, 'reservePageShow']);
+Route::post('reserve', [ReserveController::class, 'reserveDataStore']);
 
 // 予約一覧画面
 // Route::get('reserve', [ReserveController::class, 'list']);

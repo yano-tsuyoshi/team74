@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Staff;
 use App\Models\Course;
+use App\Models\Staff;
 use App\Models\Reserve;
 
 use Facade\FlareClient\Http\Response;
@@ -19,7 +19,7 @@ class ReserveController extends Controller
     // }
 
     // 予約ページ表示
-    public function index(Request $request)
+    public function reservePageShow(Request $request)
     {
         $user = User::first(); // テスト
         // $user = \Auth::user(); // userデータはAuthでゲットするのがセオリー
@@ -29,8 +29,8 @@ class ReserveController extends Controller
         // $course = Course::first();
         return view('reserves\reserve_page', [
             'user' => $user,
-            'staff' => $staff,
             // 'course' => $course,
+            'staff' => $staff,
         ]);
     }
 
@@ -40,7 +40,7 @@ class ReserveController extends Controller
      * @param Request $request
      * @return Response
      */
-    // public function show(Request $request, $id)
+    // public function userShow(Request $request, $id)
     // {
     //     $user = User::select('id', 'name')->find($id);
     //     dd($user);
@@ -49,7 +49,7 @@ class ReserveController extends Controller
     //     ]);
     // }
 
-        /**
+    /**
      * スタッフ一覧を取得
      * 
      * @param Request $request
@@ -59,7 +59,7 @@ class ReserveController extends Controller
     {
         $staffs = Staff::orderBy('id', 'asc')->get();
         return view('reserves\reserve_page', [
-            'staffs' => $staffs,
+            'staff' => $staffs,
         ]);
     }
 
@@ -71,9 +71,9 @@ class ReserveController extends Controller
     //  */
     // public function selectCourse(Request $request, $id)
     // {
-    //     $course_name = Course::select('course_name')->find($id);
+    //     $course_name = Course::select('name')->find($id);
     //     return view('reserves\reserve_page', [
-    //         'id' => $course_name,
+    //         'courses' => $course,
     //     ]);
     // }
 
@@ -83,7 +83,7 @@ class ReserveController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function store(Request $request)
+    public function reserveDataStore(Request $request)
     {
 
         $this->validate($request, [
