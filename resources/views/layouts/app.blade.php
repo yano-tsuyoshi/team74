@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 
 <head>
@@ -36,8 +37,8 @@
             </main>
         </div>    
     </div>
-        
+
     </div>
 </body>
- 
+
 </html>

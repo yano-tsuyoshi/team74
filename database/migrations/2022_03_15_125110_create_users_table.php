@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name')->comment('名前');
             $table->date('birthday')->comment('生年月日');
             $table->string('address')->comment('住所');
-            $table->string('tel')->comment('電話番号');
+            $table->unsignedBigInteger('tel')->comment('電話番号');
             $table->string('email')->comment('メールアドレス');
             $table->string('password')->comment('パスワード');
         });
