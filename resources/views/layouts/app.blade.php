@@ -16,27 +16,27 @@
 <body>
     <div class="container">
         <div class="side">
-            <div class="side-inner">
                 <ul class="nav flex-column">
                     <p>なんとか鍼灸院</p>
+                    <div class="side-inner">
                     <li> <a href="">案内</a></li>
-                    <li><a href="">施術コース</a></li>
-                    <li>  <a href="">料金</a></li>
-                    <li>  <a href="">予約</a></li>
+                    <li> <a href="">施術コース</a></li>
+                    <li> <a href="">料金</a></li>
+                    <li> <a href="">予約</a></li>
+                    </div> 
                 </ul>
-            </div>
         </div>
         <div class="main">
             <div class="main-header">
                 <button type="button">新規登録</button>
                 <button type="button">ログイン</button>
             </div>
+            <main class="py-4">
+            @yield('content')
+            </main>
         </div>    
     </div>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
+        
     </div>
 </body>
  

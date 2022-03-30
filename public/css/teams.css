@@ -1,18 +1,20 @@
 .container{
     display: flex;
     justify-content: space-between;
-    /* padding: 10em 1em; */
     margin: 2em auto;
     font-weight: bold;
     border: solid 1px #000000;
-    /* text-align: center; */
     height: 500px;
 }
 
 .side{
-    width: 100px;
+    width: 120px;
     border-right: 1px solid rgb(30, 30, 32);
     font-size: 20px;
+}
+
+.side-inner li{
+    margin-bottom: 15%;
 }
 
 .main{
@@ -20,7 +22,6 @@
     border-left: 1px solid #eef;
     border-right: 1px solid #eef;
     text-align: right;
-    /* max-width: 600px; */
     
 }
 
@@ -31,9 +32,9 @@
     font-size: 5rem;
     text-align: center;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 1px rgb(143, 135, 135);
     border-radius: 10px;
-    background-color: rgba(220, 0, 0, 1);
+    background-color: rgb(201, 191, 191);
     background-image: linear-gradient(to top left,
                                       rgba(0, 0, 0, .2),
                                       rgba(0, 0, 0, .2) 30%,
@@ -42,11 +43,52 @@
                 inset -2px -2px 3px rgba(0, 0, 0, .6);
 }
 
+.signup .button{
+    margin-top: 10%;
+}
+
 .styled:hover {
-    background-color: rgba(255, 0, 0, 1);
+    background-color: rgb(160, 151, 151);
 }
 
 .styled:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+/* 会員登録画面 */
+
+body.signup {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
+}
+
+.signup .form-signup {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.signup input{
+    margin-bottom: 10px;
+}
+
+.signup .regist-content{
+    margin-bottom: 0px;
+    /* margin-top: 5%; */
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+.flex_test-box {
+    display: flex;              /* フレックスボックスにする */
+}
+
+.signup .input-login{
+    padding: 15px;
+    margin:auto
 }
