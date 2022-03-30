@@ -49,6 +49,20 @@ class ReserveController extends Controller
     //     ]);
     // }
 
+        /**
+     * スタッフ一覧を取得
+     * 
+     * @param Request $request
+     * @return Response
+     */
+    public function indexStaff(Request $request, $id)
+    {
+        $staffs = Staff::orderBy('id', 'asc')->get();
+        return view('reserves\reserve_page', [
+            'staffs' => $staffs,
+        ]);
+    }
+
     //     /**
     //  * コース一覧を取得
     //  * 

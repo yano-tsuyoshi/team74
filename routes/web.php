@@ -21,6 +21,8 @@ Route::get('/', function () {
 
 // 予約登録画面
 Route::get('user', [ReserveController::class, 'show']);
+
+Route::get('staffs', [App\Http\Controllers\StaffController::class, 'indexStaff']);
 // Route::get('staff', [ReserveController::class, 'selectStaff']);
 // Route::get('course', [ReserveController::class, 'selectCourse']);
 Route::get('reserve', [ReserveController::class, 'index']);
