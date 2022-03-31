@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'メイリオ', 'Meiryo', 'ヒラギノ角ゴProN';
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 1076px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.h1 {
+    font-size: 16px;
+    color: red;
+}
