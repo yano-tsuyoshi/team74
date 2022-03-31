@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/* Common */
+
 body {
     margin: 0 auto;
 }
@@ -9,7 +11,6 @@ body {
 }
 
 .wrapper {
-    display: block;
     margin: 24px auto;
 }
 
@@ -18,7 +19,43 @@ body {
     text-align: center;
 }
 
+/* Parts */
+
+.btn-primary {
+    width: 80px;
+}
+
+/* Reserve Page */
+
+.inputContents {
+    display: grid;
+    width: 400px;
+    margin-bottom: 16px;
+}
+
+.textAreaLarge {
+    width: 400px;
+    height: 300px;
+}
+
+/* datePicker */
+
 .datePicker {
     display: inline-block;
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
+    text-align: center;
+}
+
+.datePicker tbody * {
+    height: 70px;
+    text-align: center;
+}
+
+.ui-datepicker-inline {
+    width: 640px;
+}
+
+.ui-datepicker-inline .a {
+    text-align: center;
+    vertical-align: center;
 }
