@@ -43,22 +43,16 @@
     3.コースを選択してください<br>
     <select name="course_id">
         <option value="">選択してください</option>
-        <option value="1">鍼灸コース 30分</option>
-        <option value="2">鍼灸コース 1時間</option>
-        <option value="3">マッサージコース 30分</option>
-        <option value="4">マッサージコース 1時間</option>
+        @foreach($courses as $course)
+        <option value="{{ $course->id }}">{{ $course->name }}</option>
+        @endforeach
     </select><br><br>
 
     5.ご希望の施術スタッフを選択してください<br>
     <select name="staff_id">
         <option value="">選択してください</option>
-        <option value="<?php echo $staff->id; ?>"><?php echo $staff->name; ?></option>
-        <option value="2">高橋</option>
-        <option value="3">鈴木</option>
-
-        <!-- TODO: ここの3行を消したら予約システム（仮）動作します -->
         @foreach($staffs as $staff)
-        <div>{{ $staff->name }}</div>
+        <option value="{{ $staff->id }}">{{ $staff->name }}</option>
         @endforeach
 
     </select>
