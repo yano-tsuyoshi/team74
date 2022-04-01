@@ -22,8 +22,6 @@ Route::get('/', function () {
 });
 
 // 予約登録画面
-Route::get('user', [ReserveController::class, 'userShow']);
-
 Route::get('reserve', [ReserveController::class, 'reservePageShow']);
 Route::post('reserve', [ReserveController::class, 'reserveDataStore']);
 

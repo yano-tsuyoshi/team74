@@ -6,13 +6,15 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Reserve;
 
+use Facade\FlareClient\Http\Response;
+
 class ReserveListController extends Controller
 {
     /**
-     * Undocumented function
+     * ユーザー情報を1件取得
      *
      * @param Request $request
-     * @return void
+     * @return Response
      */
     public function userDataShow(Request $request)
     {
@@ -22,6 +24,13 @@ class ReserveListController extends Controller
         ]);
     }
 
+    /**
+     * ユーザーが登録した予約データを1件取得
+     *
+     * @param Request $request
+     * @param [type] $id
+     * @return Response
+     */
     public function reserveDataShow(Request $request, $id)
     {
         $reserve = Reserve::select('id', 'user_id', 'name', 'date', 'time', 'course_id', 'staff_id', 'detail', 'created_at', 'updated_at')->find($id);
