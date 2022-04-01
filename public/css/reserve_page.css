@@ -11,7 +11,7 @@ body {
 }
 
 .wrapper {
-    margin: 24px auto;
+    margin: 32px auto;
 }
 
 .topTitle {
@@ -28,9 +28,12 @@ body {
 /* Reserve Page */
 
 .inputContents {
-    display: grid;
     width: 400px;
     margin-bottom: 16px;
+}
+
+.formIndex {
+    margin-bottom: 4px;
 }
 
 .textAreaLarge {
@@ -43,9 +46,9 @@ body {
 /* datePicker */
 
 .datePicker {
-    display: inline-block;
+    vertical-align: middle;
+    justify-content: center;
     margin: 0 auto 24px;
-    text-align: center;
 }
 
 .datePicker tbody * {
