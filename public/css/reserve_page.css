@@ -36,6 +36,8 @@ body {
 .textAreaLarge {
     width: 400px;
     height: 300px;
+    vertical-align: top;
+    overflow-wrap: break-word;
 }
 
 /* datePicker */

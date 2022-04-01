@@ -82,7 +82,7 @@
 
                 <div class="inputContents">
                     その他ご要望があればご記入ください
-                    <input type="text" value="" name="detail" class="textAreaLarge">
+                    <textarea value="" name="detail" class="textAreaLarge"></textarea>
                 </div>
                 <div class="inputContents">
                     <input type="submit" value="予約する" class="btn-primary">
