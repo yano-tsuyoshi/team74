@@ -32,6 +32,10 @@ body {
     margin-bottom: 16px;
 }
 
+.inputContents:last-child {
+    text-align: center;
+}
+
 .formIndex {
     margin-bottom: 4px;
 }

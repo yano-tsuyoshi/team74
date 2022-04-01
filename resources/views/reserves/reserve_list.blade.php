@@ -1,42 +1,14 @@
 @extends('layouts.app')
-
 @section('content')
+@include('common.errors')
 
-<!-- 予約データ一覧表示 -->
-@if (count($reserves) > 0)
-<div class="panel panel-default">
-    <div class="panel-heading">
-        Reserves
-    </div>
-
-    <div class="panel-body">
-        <table class="table table-striped task-table">
-
-            <!-- テーブルヘッダ -->
-            <thead>
-                <th>Reserves</th>
-                <th>&nbsp;</th>
-            </thead>
-
-            <!-- テーブル本体 -->
-            <tbody>
-                @foreach ($reserves as $reserve)
-                <tr>
-                    <!-- タスク名 -->
-                    <td class="table-text">
-                        <div>{{ $reserve->id }}</div>
-                        <div>{{ $reserve->user_id }}</div>
-                        <div>{{ $reserve->user_name }}</div>
-                    </td>
-
-                    <td>
-                        <!-- TODO: 削除ボタン -->
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
+<!-- ユーザー用ページ：予約データ表示 -->
+<div class="container">
+    <div class="wrapper">
+        <h1 class="topTitle"><?php echo $user->name; ?>様の予約詳細</h1>
+        <p>
+            <!-- まだ$reservesが届いていないのでエラー -->
+            <?php echo $reserve->name; ?>
+        </p>
     </div>
 </div>
-@endif
-@endsection

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReserveController;
+use App\Http\Controllers\ReserveListController;
 use App\Http\Controllers\StaffController;
 
 /*
@@ -27,4 +28,5 @@ Route::get('reserve', [ReserveController::class, 'reservePageShow']);
 Route::post('reserve', [ReserveController::class, 'reserveDataStore']);
 
 // 予約一覧画面
-// Route::get('reserve', [ReserveController::class, 'list']);
+Route::get('reserve_list', [ReserveListController::class, 'userDataShow']);
+Route::get('reserve_list', [ReserveListController::class, 'reserveDataShow']);

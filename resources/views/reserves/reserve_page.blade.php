@@ -8,6 +8,7 @@
     <!-- JavaScript / jQuery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    
     <script>
         $(function() {
             var dateFormat = 'y-m-d';
@@ -33,7 +34,8 @@
                 {{ csrf_field() }}
                 <p>
                     ユーザーID：<?php echo $user->id; ?><br>
-                    予約者名：<?php echo $user->name; ?>
+                    予約者名：<?php echo $user->name; ?><br>
+                    予約内容を確認したい場合はこちら：<a href="reserve_list">予約一覧</a>
                 </p>
                 <input type="hidden" value="<?php echo $user->id; ?>" name="user_id">
                 <input type="hidden" value="<?php echo $user->name; ?>" name="name">
