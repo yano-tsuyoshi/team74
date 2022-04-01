@@ -27,6 +27,6 @@ Route::get('user', [ReserveController::class, 'userShow']);
 Route::get('reserve', [ReserveController::class, 'reservePageShow']);
 Route::post('reserve', [ReserveController::class, 'reserveDataStore']);
 
-// 予約一覧画面
+// ユーザー用予約表示画面
 Route::get('reserve_list', [ReserveListController::class, 'userDataShow']);
 Route::get('reserve_list', [ReserveListController::class, 'reserveDataShow']);
