@@ -12,6 +12,7 @@ body {
 
 .wrapper {
     margin: 32px auto;
+    display: block;
 }
 
 .topTitle {
@@ -22,14 +23,14 @@ body {
 /* Parts */
 
 .btn-primary {
-    width: 80px;
+    width: fit-content;
 }
 
 /* Reserve Page */
 
 .inputContents {
-    width: 400px;
     margin-bottom: 16px;
+    width: 400px;
 }
 
 .inputContents:last-child {
@@ -67,4 +68,48 @@ body {
 .ui-datepicker-inline .a {
     text-align: center;
     vertical-align: center;
+}
+
+/* Modal - Confirm */
+
+.modal__bg {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+
+.modal__content {
+    text-align: center;
+    background: #e8e8e8;
+    color: #242424;
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal__content .d-block {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 4px 4px 6px rgb(0 0 0);
+}
+
+.js-modal-close {
+    display: table;
+    margin: 0 auto;
+}
+
+/* Confirm Table */
+
+.reserveConfirm {
+    margin: 32px auto;
+}
+
+.reserveConfirm .alignRight {
+    text-align: right;
+    right: 0;
 }
