@@ -31,11 +31,28 @@ class ReserveListController extends Controller
      * @param [type] $id
      * @return Response
      */
-    public function reserveDataShow(Request $request, $id)
+    public function reserveShow(Request $request, $id)
     {
         $reserve = Reserve::select('id', 'user_id', 'name', 'date', 'time', 'course_id', 'staff_id', 'detail', 'created_at', 'updated_at')->find($id);
         return view('reserves\reserve_list', [
             'reserve' => $reserve,
         ]);
     }
+
+    /**
+     * 予約データをリスト表示（管理者用）
+     *
+     * @param Request $request
+     * @param [type] $id
+     * @return Response
+     */
+    public function reserveIndex(Request $request, $id)
+    {
+        $reserve = Reserve::select('id', 'user_id', 'name', 'date', 'time', 'course_id', 'staff_id', 'detail', 'created_at', 'updated_at')->find($id);
+        return view('reserves\reserve_list', [
+            'reserve' => $reserve,
+        ]);
+    }
+
+
 }

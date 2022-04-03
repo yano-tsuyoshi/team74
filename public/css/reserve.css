@@ -10,12 +10,12 @@ body {
     height: fit-content;
 }
 
-.wrapper {
+.form-group {
     margin: 32px auto;
     display: block;
 }
 
-.topTitle {
+.top-title {
     font-size: 24px;
     text-align: center;
 }
@@ -28,20 +28,20 @@ body {
 
 /* Reserve Page */
 
-.inputContents {
+.input-area {
     margin-bottom: 16px;
     width: 400px;
 }
 
-.inputContents:last-child {
+.input-area:last-child {
     text-align: center;
 }
 
-.formIndex {
+.form-index {
     margin-bottom: 4px;
 }
 
-.textAreaLarge {
+.textarea-bg {
     width: 400px;
     height: 300px;
     vertical-align: top;
