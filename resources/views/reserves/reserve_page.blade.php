@@ -94,7 +94,7 @@
                     <button type="submit" class="btn-primary">予約する</button>
                 </div> -->
                 <div class="input-area">
-                    <button class="js-modal-open btn-primary" href="" data-target="confirmModal">予約内容を確認</button>
+                    <button class="js-modal-open btn-primary" href="" data-target="confirmModal">予約確認</button>
                 </div>
 
                 <div class="modal js-modal" id="confirmModal">
@@ -104,20 +104,20 @@
                         <a href="" rel="noopener noreferrer" class="js-modal-close">
                             <div class="btn-close"></div>
                         </a>
-                        <p>以下の通り予約します。問題ないようでしたら「予約する」ボタンを押してください</p>
+                        <p>以下の通り予約します。ご確認のうえ「予約を確定する」ボタンを押してください</p>
                         <div>
                             <table class="reserveConfirm">
                                 <tr>
-                                    <td class="align-right">お名前： </td>
-                                    <td><p class="px-2" id="name"></p></td>
+                                    <td class="align-right">お名前：</td>
+                                    <td><?php echo $user->name; ?></td>
                                 </tr>
                                 <tr>
                                     <td class="align-right">日付：</td>
-                                    <td><p class="px-2" id="date"></p></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td class="align-right">時間：</td>
-                                    <td>0000</td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td class="align-right">コース：</td>
@@ -129,12 +129,12 @@
                                 </tr>
                                 <tr>
                                     <td class="align-right">コメント：</td>
-                                    <td>Empty</td>
+                                    <td></td>
                                 </tr>
                             </table>
                         </div>
                         <div class="input-area">
-                            <button type="submit" class="btn-primary">予約する</button>
+                            <button type="submit" class="btn-primary">予約を確定する</button>
                         </div>
                     </div>
                 </div>
