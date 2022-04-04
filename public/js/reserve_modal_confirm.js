@@ -11,15 +11,19 @@ $(function () {
             var target = $(this).data('target');
             var modal = document.getElementById(target);
             $('body').css('overflow-y', 'hidden');
-            // $('body').css('padding-right', '15px');
             $(modal).fadeIn();
+
+            var title = $('#name').val()
+            var modal = $(this)
+            modal.find('#name').text(name)
+
             return false;
         });
     });
     $('.js-modal-close').on('click', function () {
         $('.js-modal').fadeOut();
         $('body').css('overflow-y', 'auto');
-        // $('body').css('padding-right', '0');
         return false;
     });
 });
+

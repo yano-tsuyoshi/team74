@@ -41,12 +41,12 @@
                     予約者名：<?php echo $user->name; ?><br>
                     予約内容を確認したい場合はこちら：<a href="reserve_list">予約一覧</a>
                 </p>
-                <input type="hidden" value="<?php echo $user->id; ?>" name="user_id">
-                <input type="hidden" value="<?php echo $user->name; ?>" name="name">
+                <input type="hidden" value="<?php echo $user->id; ?>" name="user_id" id="user_id">
+                <input type="hidden" value="<?php echo $user->name; ?>" name="name" id="name">
 
                 <p class="form-index">カレンダーから日付を選択してください</p>
                 <div class="input-area">
-                    <input type="text" id="date_val" name="date">
+                    <input type="text" name="date" id="date_val">
                     <div id="datepicker" class="datePicker"></div>
                 </div>
 
@@ -68,7 +68,7 @@
 
                 <div class="input-area">
                     <p class="form-index">コースを選択してください</p>
-                    <select name="course_id">
+                    <select name="course_id" id="course_id">
                         <option value="">選択してください</option>
                         @foreach($courses as $course)
                         <option value="{{ $course->id }}">{{ $course->name }}</option>
@@ -78,7 +78,7 @@
 
                 <div class="input-area">
                     <p class="form-index">ご希望の施術スタッフを選択してください</p>
-                    <select name="staff_id">
+                    <select name="staff_id" id="staff_id">
                         <option value="">選択してください</option>
                         @foreach($staffs as $staff)
                         <option value="{{ $staff->id }}">{{ $staff->name }}</option>
@@ -88,58 +88,57 @@
 
                 <div class="input-area">
                     <p class="form-index">その他ご要望があればご記入ください</p>
-                    <textarea value="" name="detail" class="textarea-bg"></textarea>
+                    <textarea value="" name="detail" id="detail" class="textarea-bg"></textarea>
                 </div>
                 <!-- <div class="input-area">
                     <button type="submit" class="btn-primary">予約する</button>
                 </div> -->
-
                 <div class="input-area">
-                    <button class="js-modal-open btn-primary" href="" data-target="confirm">予約内容を確認</button>
+                    <button class="js-modal-open btn-primary" href="" data-target="confirmModal">予約内容を確認</button>
+                </div>
+
+                <div class="modal js-modal" id="confirmModal">
+                    <div class="modal__bg js-modal-close"></div>
+                    <!-- Modal Contents -->
+                    <div class="modal__content">
+                        <a href="" rel="noopener noreferrer" class="js-modal-close">
+                            <div class="btn-close"></div>
+                        </a>
+                        <p>以下の通り予約します。問題ないようでしたら「予約する」ボタンを押してください</p>
+                        <div>
+                            <table class="reserveConfirm">
+                                <tr>
+                                    <td class="align-right">お名前： </td>
+                                    <td><p class="px-2" id="name"></p></td>
+                                </tr>
+                                <tr>
+                                    <td class="align-right">日付：</td>
+                                    <td><p class="px-2" id="date"></p></td>
+                                </tr>
+                                <tr>
+                                    <td class="align-right">時間：</td>
+                                    <td>0000</td>
+                                </tr>
+                                <tr>
+                                    <td class="align-right">コース：</td>
+                                    <td>{{ $course->name }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="align-right">スタッフ：</td>
+                                    <td>{{ $staff->name }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="align-right">コメント：</td>
+                                    <td>Empty</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="input-area">
+                            <button type="submit" class="btn-primary">予約する</button>
+                        </div>
+                    </div>
                 </div>
             </form>
-        </div>
-
-        <div class="modal js-modal" id="confirm">
-            <div class="modal__bg js-modal-close"></div>
-            <!-- Modal Contents -->
-            <div class="modal__content">
-                <a href="" rel="noopener noreferrer" class="js-modal-close">
-                    <div class="btn-close"></div>
-                </a>
-                <p>以下の通り予約します。問題ないようでしたら「予約する」ボタンを押してください</p>
-                <div>
-                    <table class="reserveConfirm">
-                        <tr>
-                            <td class="alignRight">お名前： </td>
-                            <td>{{ $user->name }}</td>
-                        </tr>
-                        <tr>
-                            <td class="alignRight">日付：</td>
-                            <td><input type="text" id="date_val" name="date"></td>
-                        </tr>
-                        <tr>
-                            <td class="alignRight">時間：</td>
-                            <td>0000</td>
-                        </tr>
-                        <tr>
-                            <td class="alignRight">コース：</td>
-                            <td>{{ $course->name }}</td>
-                        </tr>
-                        <tr>
-                            <td class="alignRight">スタッフ：</td>
-                            <td>{{ $staff->name }}</td>
-                        </tr>
-                        <tr>
-                            <td class="alignRight">コメント：</td>
-                            <td>Empty</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="input-area">
-                    <button type="submit" class="btn-primary">予約する</button>
-                </div>
-            </div>
         </div>
     </div>
 </body>
