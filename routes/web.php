@@ -17,7 +17,7 @@ use App\Http\Controllers\ReserveController;
 // ホーム画面
 Route::get('/top', function () {
     return view('teams/index');
-});
+})->name('top');
 
 
 // 予約登録画面
@@ -34,3 +34,10 @@ Route::post('reserve', [ReserveController::class, 'store']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// 案内画面
+Route::get('/guide', [App\Http\Controllers\HomeController::class, 'guide'])->name('guide');
+// 施術コース
+Route::get('/course', [App\Http\Controllers\HomeController::class, 'course'])->name('course');
+// 料金
+Route::get('/price', [App\Http\Controllers\HomeController::class, 'price'])->name('price');

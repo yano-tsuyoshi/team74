@@ -7,8 +7,8 @@
             <div class="side-inner">
                 <ul class="nav flex-column">
                     <p>なんとか鍼灸院</p>
-                    <li> <a href="">案内</a></li>
-                    <li><a href="">施術コース</a></li>
+                    <li> <a href="guide">案内</a></li>
+                    <li><a href="course">施術コース</a></li>
                     <li>  <a href="">料金</a></li>
                     <li>  <a href="reserve">予約</a></li>
                 </ul>
