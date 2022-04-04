@@ -39,7 +39,7 @@
                 <p>
                     ユーザーID：<?php echo $user->id; ?><br>
                     予約者名：<?php echo $user->name; ?><br>
-                    予約内容を確認したい場合はこちら：<a href="reserve_list">予約一覧</a>
+                    予約内容を確認したい場合はこちら：<a href="reserve_show">予約一覧</a>
                 </p>
                 <input type="hidden" value="<?php echo $user->id; ?>" name="user_id" id="user_id">
                 <input type="hidden" value="<?php echo $user->name; ?>" name="name" id="name">
