@@ -88,7 +88,7 @@
 
                 <div class="input-area">
                     <p class="form-index">その他ご要望があればご記入ください</p>
-                    <textarea value="" name="detail" id="detail" class="textarea-bg"></textarea>
+                    <textarea value="" name="detail" id="detail" class="textarea-large"></textarea>
                 </div>
                 <!-- <div class="input-area">
                     <button type="submit" class="btn-primary">予約する</button>
@@ -101,9 +101,6 @@
                     <div class="modal__bg js-modal-close"></div>
                     <!-- Modal Contents -->
                     <div class="modal__content">
-                        <a href="" rel="noopener noreferrer" class="js-modal-close">
-                            <div class="btn-close"></div>
-                        </a>
                         <p>以下の通り予約します。ご確認のうえ「予約を確定する」ボタンを押してください</p>
                         <div>
                             <table class="reserveConfirm">
@@ -134,7 +131,10 @@
                             </table>
                         </div>
                         <div class="input-area">
-                            <button type="submit" class="btn-primary">予約を確定する</button>
+                            <div class="btns-box">
+                                <button type="reset" class="btn-secondary js-modal-close">キャンセル</button>
+                                <button type="submit" class="btn-primary">予約する</button>
+                            </div>
                         </div>
                     </div>
                 </div>

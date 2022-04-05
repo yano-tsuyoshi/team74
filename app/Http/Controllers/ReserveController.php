@@ -44,7 +44,11 @@ class ReserveController extends Controller
     {
 
         $this->validate($request, [
-            'detail' => 'required|max:1000',
+            'date' => 'required',
+            'time' => 'required',
+            'course_id' => 'required',
+            'staff_id' => 'required',
+            'detail' => 'max:1000',
         ]);
 
         // 予約データ作成

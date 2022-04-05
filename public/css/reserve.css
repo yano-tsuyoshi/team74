@@ -22,13 +22,23 @@ body {
 
 /* Parts */
 
-.btn-primary {
+.btn-primary .btn-secondary {
     width: fit-content;
+}
+
+.btns-box {
+    display: flex;
+    justify-content: center;
+}
+
+.btns-box .btn-primary {
+    margin-left: 16px;
 }
 
 /* Reserve Page */
 
 .input-area {
+    margin: 0 auto;
     margin-bottom: 16px;
     width: 400px;
 }
@@ -41,7 +51,7 @@ body {
     margin-bottom: 4px;
 }
 
-.textarea-bg {
+.textarea-large {
     width: 400px;
     height: 300px;
     vertical-align: top;
@@ -96,11 +106,6 @@ body {
     box-sizing: border-box;
     overflow: hidden;
     box-shadow: 4px 4px 6px rgb(0 0 0);
-}
-
-.js-modal-close {
-    display: table;
-    margin: 0 auto;
 }
 
 /* Confirm Table */
