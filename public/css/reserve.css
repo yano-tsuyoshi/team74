@@ -8,6 +8,7 @@ body {
 
 .container {
     height: fit-content;
+    font-weight: initial;
 }
 
 .form-group {
@@ -60,13 +61,14 @@ body {
 
 /* datePicker */
 
-.datePicker {
-    vertical-align: middle;
+.date-picker {
     justify-content: center;
-    margin: 0 auto 24px;
+    margin: 0 -120px;
+    margin-bottom: 24px;
+    width: fit-content;
 }
 
-.datePicker tbody * {
+.date-picker tbody * {
     height: 70px;
     text-align: center;
 }

@@ -46,8 +46,8 @@
 
                 <p class="form-index">カレンダーから日付を選択してください</p>
                 <div class="input-area">
+                    <div id="datepicker" class="date-picker"></div>
                     <input type="text" name="date" id="date_val">
-                    <div id="datepicker" class="datePicker"></div>
                 </div>
 
                 <div class="input-area">
@@ -101,7 +101,7 @@
                     <div class="modal__bg js-modal-close"></div>
                     <!-- Modal Contents -->
                     <div class="modal__content">
-                        <p>以下の通り予約します。ご確認のうえ「予約を確定する」ボタンを押してください</p>
+                        <p>以下の通り予約します。ご確認のうえ「予約する」ボタンを押してください</p>
                         <div>
                             <table class="reserveConfirm">
                                 <tr>
