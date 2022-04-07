@@ -12,10 +12,12 @@ $(function () {
             var modal = document.getElementById(target);
             $(modal).fadeIn();
 
-            var title = $('#name').val()
+            var title = $('#date_val').val()
+            // var body = $('#formBody').val()
             var modal = $(this)
-            modal.find('#name').text(name)
-            
+            modal.find('#date_val').text(title)
+            // modal.find('#modalBody').text(body)
+
             return false;
         });
     });
@@ -25,3 +27,16 @@ $(function () {
     });
 });
 
+
+
+
+// // NEW MODAL
+//     $(function() {
+//         $('#exampleModal').on('show.bs.modal', function() {
+//             var title = $('#formTitle').val()
+//             var body = $('#formBody').val()
+//             var modal = $(this)
+//             modal.find('#modalTitle').text(title)
+//             modal.find('#modalBody').text(body)
+//         })
+//     })

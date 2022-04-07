@@ -27,7 +27,6 @@
     </script>
 </head>
 
-<!-- 2. フォームの見た目 -->
 <!-- 3. 時間あるなら予約データ編集・削除機能 -->
 
 <body>
@@ -63,6 +62,7 @@
                         <option value="16:00:00">16:00</option>
                         <option value="17:00:00">17:00</option>
                         <option value="18:00:00">18:00</option>
+                        <option value="18:00:00">19:00</option>
                     </select>
                 </div>
 
@@ -90,9 +90,6 @@
                     <p class="form-index">その他ご要望があればご記入ください</p>
                     <textarea value="" name="detail" id="detail" class="textarea-large"></textarea>
                 </div>
-                <!-- <div class="input-area">
-                    <button type="submit" class="btn-primary">予約する</button>
-                </div> -->
                 <div class="input-area">
                     <button class="js-modal-open btn-primary" href="" data-target="confirmModal">予約確認</button>
                 </div>
@@ -101,7 +98,7 @@
                     <div class="modal__bg js-modal-close"></div>
                     <!-- Modal Contents -->
                     <div class="modal__content">
-                        <p>以下の通り予約します。ご確認のうえ「予約する」ボタンを押してください</p>
+                        <p>以下の通り予約します。お間違いがなければ「予約する」ボタンを押してください</p>
                         <div>
                             <table class="reserveConfirm">
                                 <tr>
@@ -110,7 +107,7 @@
                                 </tr>
                                 <tr>
                                     <td class="align-right">日付：</td>
-                                    <td></td>
+                                    <td><p class="px-2" id="date_val"></p></td>
                                 </tr>
                                 <tr>
                                     <td class="align-right">時間：</td>
