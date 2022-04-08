@@ -4,7 +4,6 @@
 
 // Bootstrap5, jQuery
 // 「予約する」ボタンをクリックするとモーダルが開き、フォームの入力内容が表示される
-// bootstrap5は modal.find 使えません
 
 $(function () {
     $('.js-modal-open').each(function () {
