@@ -23,13 +23,11 @@ $(function () {
             var modal = $(this);
 
             // フォーム入力データをモーダルに表示
-            modal.find('#date_confirm').text(date);
-            modal.find('#time_confirm').text(time);
-            modal.find('#course_confirm').text(course);
-            modal.find('#staff_confirm').text(staff);
-            modal.find('#detail_confirm').text(detail);
-
-            console.log(document.getElementById('time_confirm'));
+            $("#date_confirm").text(date);
+            $('#time_confirm').text(time);
+            $('#course_confirm').text(course);
+            $('#staff_confirm').text(staff);
+            $('#detail_confirm').text(detail);
 
             // 確認用
             console.log(date);

@@ -21,17 +21,17 @@ Route::get('/', function () {
     return view('teams/index');
 });
 
-// 予約登録画面
+// 予約登録画面（西田）
 Route::get('reserve', [ReserveController::class, 'reservePageShow']);
 Route::post('reserve', [ReserveController::class, 'reserveDataStore']);
 
-// ユーザー用予約表示画面
+// ユーザー用予約表示画面（西田）
 Route::get('reserve_show', [ReserveListController::class, 'userDataShow']);
 Route::get('reserve_show', [ReserveListController::class, 'reserveShow']);
 Route::get('reserve_show', [ReserveListController::class, 'reserveIndex']);
 
 //以下マルチログイン
-Auth::routes();
+// Auth::routes(); コメントアウトすることでサーバーが起動しました
 // ユーザー側　一般画面
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
