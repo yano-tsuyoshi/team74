@@ -4,6 +4,7 @@
 
 // Bootstrap5, jQuery
 // 「予約する」ボタンをクリックするとモーダルが開き、フォームの入力内容が表示される
+// bootstrap5は modal.find 使えません
 
 $(function () {
     $('.js-modal-open').each(function () {
@@ -22,14 +23,15 @@ $(function () {
             var modal = $(this);
 
             // フォーム入力データをモーダルに表示
-            var date;
+            modal.find('#date_confirm').text(date);
+            modal.find('#time_confirm').text(time);
+            modal.find('#course_confirm').text(course);
+            modal.find('#staff_confirm').text(staff);
+            modal.find('#detail_confirm').text(detail);
 
-            modal.find('.date_confirm').text(date);
-            modal.find('.time_confirm').text(time);
-            modal.find('.course_confirm').text(course);
-            modal.find('.staff_confirm').text(staff);
-            modal.find('.detail_confirm').text(detail);
+            console.log(document.getElementById('time_confirm'));
 
+            // 確認用
             console.log(date);
             console.log(time);
             console.log(course);
@@ -44,6 +46,3 @@ $(function () {
         return false;
     });
 });
-
-
-// bootstrap5はmodal.find使えません

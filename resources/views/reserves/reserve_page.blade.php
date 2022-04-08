@@ -3,8 +3,10 @@
 @include('common.errors')
 
 <head>
-    <!-- CSS - Bootstrap 5.0.0 -->
+    <!-- CSS - Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- CSS - Bootstrap 4 Test-->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <!-- CSS - jQuery for Calendar (DatePicker) -->
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css">
     <!-- JavaScript / jQuery -->
@@ -115,25 +117,37 @@
                                 <tr>
                                     <td class="align-right">時間：</td>
                                     <td>
-                                        <p id="time_confirm" class="time_confirm">
+                                        <!-- <p id="time_confirm" class="time_confirm"> -->
+                                        <p>
+                                            10:00:00
+                                        </p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="align-right">コース：</td>
                                     <td>
-                                        <p id="course_Confirm" class="course_confirm">
+                                        <!-- <p id="course_Confirm" class="course_confirm"> -->
+                                        <p>
+                                            1
+                                        </p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="align-right">スタッフ：</td>
                                     <td>
-                                        <p id="staff_confirm" class="staff_confirm">
+                                        <!-- <p id="staff_confirm" class="staff_confirm"> -->
+                                        <p>
+                                            1
+                                        </p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="align-right">コメント：</td>
                                     <td>
-                                        <p id="detail_confirm" class="detail_confirm">
+                                        <!-- <p id="detail_confirm" class="detail_confirm"> -->
+                                        <p>
+                                            test
+                                        </p>
                                     </td>
                                 </tr>
                             </table>
