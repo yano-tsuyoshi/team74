@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -42,28 +41,40 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @guest
-                        @if (Route::has('login'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
-                        @endif
+                        @if(!Auth::check() && (!isset($authgroup) || !Auth::guard($authgroup)->check()))
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    @isset($authgroup)
+                                    <a class="nav-link" href="{{ url("login/$authgroup") }}">{{ __('Login') }}</a>
+                                    @else
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    @endisset
+                                </li>
+                            @endif
 
-                        @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
-                        @endif
+                            @if (Route::has('register'))
+                            @isset($authgroup)
+                            @if (Route::has("$authgroup-register"))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route("$authgroup-register") }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                            @else
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                            @endisset
+                            @endif
                         @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    @isset($authgroup)
+                                    {{ Auth::guard($authgroup)->user()->name }}
+                                    @else
+                                    {{ Auth::user()->name }}
+                                    @endisset
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -71,56 +82,16 @@
                                 </form>
                             </div>
                         </li>
-                        @endguest
+                        @endif
                     </ul>
                 </div>
             </div>
         </nav>
-=======
-<html lang="ja">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- BootstrapCSS  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/teams.css">
-
-    <title>チーム開発 ホーム画面</title>
-</head>
-
-<body>
-    <div class="container">
-        <div class="side">
-            <div class="side-inner">
-                <ul class="nav flex-column">
-                    <p>なんとか鍼灸院</p>
-                    <li> <a href="">案内</a></li>
-                    <li><a href="">施術コース</a></li>
-                    <li>  <a href="">料金</a></li>
-                    <li>  <a href="">予約</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="main">
-            <div class="main-header">
-                <button type="button">新規登録</button>
-                <button type="button">ログイン</button>
-            </div>
-        </div>    
-    </div>
->>>>>>> 6340e5df3d0bab5cef1b1a0b7bc99d4558224119
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
 </body>
-<<<<<<< HEAD
-
-=======
- 
->>>>>>> 6340e5df3d0bab5cef1b1a0b7bc99d4558224119
 </html>
