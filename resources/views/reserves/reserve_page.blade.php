@@ -21,6 +21,7 @@
                 minDate: 0,
                 onSelect: function(dateText, inst) {
                     $("#date_val").val(dateText);
+                    $("#dateConfirm").text(dateText);
                 }
             });
         });
@@ -51,7 +52,7 @@
 
                 <div class="input-area">
                     <p class="form-index">時間帯を選択してください</p>
-                    <select name="time">
+                    <select name="time" id="time_val">
                         <option value="">選択してください</option>
                         <option value="10:00:00">10:00</option>
                         <option value="11:00:00">11:00</option>
@@ -68,7 +69,7 @@
 
                 <div class="input-area">
                     <p class="form-index">コースを選択してください</p>
-                    <select name="course_id" id="course_id">
+                    <select name="course_id" id="course">
                         <option value="">選択してください</option>
                         @foreach($courses as $course)
                         <option value="{{ $course->id }}">{{ $course->name }}</option>
@@ -78,7 +79,7 @@
 
                 <div class="input-area">
                     <p class="form-index">ご希望の施術スタッフを選択してください</p>
-                    <select name="staff_id" id="staff_id">
+                    <select name="staff_id" id="staff">
                         <option value="">選択してください</option>
                         @foreach($staffs as $staff)
                         <option value="{{ $staff->id }}">{{ $staff->name }}</option>
@@ -107,23 +108,23 @@
                                 </tr>
                                 <tr>
                                     <td class="align-right">日付：</td>
-                                    <td><p class="px-2" id="date_val"></p></td>
+                                    <td><p id="dateConfirm" class="date_confirm"></p></td>
                                 </tr>
                                 <tr>
                                     <td class="align-right">時間：</td>
-                                    <td></td>
+                                    <td><p id="timeConfirm" class="time_confirm"></td>
                                 </tr>
                                 <tr>
                                     <td class="align-right">コース：</td>
-                                    <td>{{ $course->name }}</td>
+                                    <td><p id="courseConfirm" class="course_confirm"></td>
                                 </tr>
                                 <tr>
                                     <td class="align-right">スタッフ：</td>
-                                    <td>{{ $staff->name }}</td>
+                                    <td><p id="staffConfirm" class="staff_confirm"></td>
                                 </tr>
                                 <tr>
                                     <td class="align-right">コメント：</td>
-                                    <td></td>
+                                    <td><p id="detailConfirm" class="detail_confirm"></td>
                                 </tr>
                             </table>
                         </div>

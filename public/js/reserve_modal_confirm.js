@@ -2,8 +2,8 @@
 // Reserve - Modal
 /////////////////////////////
 
-// jQuery
-// Worksのタイトルもしくは画像をクリックするとModalが開く
+// Bootstrap5, jQuery
+// 「予約する」ボタンをクリックするとモーダルが開き、フォームの入力内容が表示される
 
 $(function () {
     $('.js-modal-open').each(function () {
@@ -12,11 +12,25 @@ $(function () {
             var modal = document.getElementById(target);
             $(modal).fadeIn();
 
-            var title = $('#date_val').val()
-            // var body = $('#formBody').val()
-            var modal = $(this)
-            modal.find('#date_val').text(title)
-            // modal.find('#modalBody').text(body)
+            var date = $('#date_val').val();
+            var time = $('#time_val').val();
+            var course = $('#course').val();
+            var staff = $('#staff').val();
+            var detail = $('#detail').val();
+
+            var modal = $(this);
+
+            modal.find('.date_confirm').text(date);
+            modal.find('.time_confirm').text(time);
+            modal.find('.course_confirm').text(course);
+            modal.find('.staff_confirm').text(staff);
+            modal.find('.detail_confirm').text(detail);
+
+            console.log(date);
+            console.log(time);
+            console.log(course);
+            console.log(staff);
+            console.log(detail);
 
             return false;
         });
@@ -28,15 +42,4 @@ $(function () {
 });
 
 
-
-
-// // NEW MODAL
-//     $(function() {
-//         $('#exampleModal').on('show.bs.modal', function() {
-//             var title = $('#formTitle').val()
-//             var body = $('#formBody').val()
-//             var modal = $(this)
-//             modal.find('#modalTitle').text(title)
-//             modal.find('#modalBody').text(body)
-//         })
-//     })
+// bootstrap5はmodal.find使えません
