@@ -31,7 +31,7 @@ Route::get('reserve_show', [ReserveListController::class, 'reserveShow']);
 Route::get('reserve_show', [ReserveListController::class, 'reserveIndex']);
 
 //以下マルチログイン
-// Auth::routes(); コメントアウトすることでサーバーが起動しました
+// Auth::routes();
 // ユーザー側　一般画面
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
