@@ -21,7 +21,7 @@
                 minDate: 0,
                 onSelect: function(dateText, inst) {
                     $("#date_val").val(dateText);
-                    $("#dateConfirm").text(dateText);
+                    $("#date_confirm").text(dateText);
                 }
             });
         });
@@ -69,7 +69,7 @@
 
                 <div class="input-area">
                     <p class="form-index">コースを選択してください</p>
-                    <select name="course_id" id="course">
+                    <select name="course_id" id="course_val">
                         <option value="">選択してください</option>
                         @foreach($courses as $course)
                         <option value="{{ $course->id }}">{{ $course->name }}</option>
@@ -79,7 +79,7 @@
 
                 <div class="input-area">
                     <p class="form-index">ご希望の施術スタッフを選択してください</p>
-                    <select name="staff_id" id="staff">
+                    <select name="staff_id" id="staff_val">
                         <option value="">選択してください</option>
                         @foreach($staffs as $staff)
                         <option value="{{ $staff->id }}">{{ $staff->name }}</option>
@@ -89,7 +89,7 @@
 
                 <div class="input-area">
                     <p class="form-index">その他ご要望があればご記入ください</p>
-                    <textarea value="" name="detail" id="detail" class="textarea-large"></textarea>
+                    <textarea value="" name="detail" id="detail_val" class="textarea-large"></textarea>
                 </div>
                 <div class="input-area">
                     <button class="js-modal-open btn-primary" href="" data-target="confirmModal">予約確認</button>
@@ -108,23 +108,33 @@
                                 </tr>
                                 <tr>
                                     <td class="align-right">日付：</td>
-                                    <td><p id="dateConfirm" class="date_confirm"></p></td>
+                                    <td>
+                                        <p id="date_confirm" class="date_confirm"></p>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="align-right">時間：</td>
-                                    <td><p id="timeConfirm" class="time_confirm"></td>
+                                    <td>
+                                        <p id="time_confirm" class="time_confirm">
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="align-right">コース：</td>
-                                    <td><p id="courseConfirm" class="course_confirm"></td>
+                                    <td>
+                                        <p id="course_Confirm" class="course_confirm">
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="align-right">スタッフ：</td>
-                                    <td><p id="staffConfirm" class="staff_confirm"></td>
+                                    <td>
+                                        <p id="staff_confirm" class="staff_confirm">
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td class="align-right">コメント：</td>
-                                    <td><p id="detailConfirm" class="detail_confirm"></td>
+                                    <td>
+                                        <p id="detail_confirm" class="detail_confirm">
+                                    </td>
                                 </tr>
                             </table>
                         </div>
