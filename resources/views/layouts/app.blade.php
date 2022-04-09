@@ -47,7 +47,7 @@
                     {{ config('app.name', 'Laravel') }}
                 </a>
 
-                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="dropdown" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler" type="button" data-bs-toggle="dropdown" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button> -->
 
@@ -62,28 +62,40 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
-                        @guest
-                        @if (Route::has('login'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        </li>
-                        @endif
+                        @if(!Auth::check() && (!isset($authgroup) || !Auth::guard($authgroup)->check()))
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    @isset($authgroup)
+                                    <a class="nav-link" href="{{ url("login/$authgroup") }}">{{ __('Login') }}</a>
+                                    @else
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    @endisset
+                                </li>
+                            @endif
 
-                        @if (Route::has('register'))
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </li>
-                        @endif
+                            @if (Route::has('register'))
+                            @isset($authgroup)
+                            @if (Route::has("$authgroup-register"))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route("$authgroup-register") }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                            @else
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                            @endisset
+                            @endif
                         @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                            </a>
-
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    @isset($authgroup)
+                                    {{ Auth::guard($authgroup)->user()->name }}
+                                    @else
+                                    {{ Auth::user()->name }}
+                                    @endisset
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -91,13 +103,13 @@
                                 </form>
                             </div>
                         </li>
-                        @endguest
+                        @endif
                     </ul>
                 </div>
 
             </div>
 
-        </nav> -->
+        </nav> 
 
 
 
@@ -140,5 +152,4 @@
 
     </div>
 </body>
-
 </html>

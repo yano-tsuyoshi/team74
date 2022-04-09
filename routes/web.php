@@ -31,9 +31,6 @@ Route::post('reserve', [ReserveController::class, 'store']);
 // Route::get('reserve', [ReserveController::class, 'list']);
 
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // 案内画面
 Route::get('/guide', [App\Http\Controllers\HomeController::class, 'guide'])->name('guide');
@@ -41,3 +38,17 @@ Route::get('/guide', [App\Http\Controllers\HomeController::class, 'guide'])->nam
 Route::get('/course', [App\Http\Controllers\HomeController::class, 'course'])->name('course');
 // 料金
 Route::get('/price', [App\Http\Controllers\HomeController::class, 'price'])->name('price');
+//以下マルチログイン
+Auth::routes();
+// ユーザー側　一般画面
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// 管理者ログイン画面
+Route::get('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'showAdminLoginForm']);
+// 管理者登録画面
+Route::get('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'showAdminRegisterForm']);
+
+Route::post('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'adminLogin']);
+Route::post('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'registerAdmin'])->name('admin-register');
+
+Route::view('/admin', 'admin')->middleware('auth:admin')->name('admin-home');
