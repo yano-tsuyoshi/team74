@@ -101,41 +101,53 @@
                     <div class="modal__content">
                         <p>以下の通り予約します。お間違いがなければ「予約する」ボタンを押してください</p>
                         <div>
-                            <table class="reserveConfirm">
+                            <table class="reserve-confirm">
                                 <tr>
-                                    <td class="align-right">お名前：</td>
                                     <td>
-                                        <p><?php echo $user->name; ?></p>
+                                        <p class="confirm confirm-right">お名前：</p>
+                                    </td>
+                                    <td>
+                                        <p class="confirm"><?php echo $user->name; ?></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="align-right">日付：</td>
                                     <td>
-                                        <p id="date_confirm" class="date_confirm"></p>
+                                        <p class="confirm confirm-right">日付：</p>
+                                    </td>
+                                    <td>
+                                        <p id="date_confirm" class="confirm date_confirm"></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="align-right">時間：</td>
                                     <td>
-                                        <p id="time_confirm" class="time_confirm"></p>
+                                        <p class="confirm confirm-right">時間：</p>
+                                    </td>
+                                    <td>
+                                        <p id="time_confirm" class="confirm time_confirm"></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="align-right">コース：</td>
                                     <td>
-                                        <p id="course_confirm" class="course_confirm"></p>
+                                        <p class="confirm confirm-right">コース：</p>
+                                    </td>
+                                    <td>
+                                        <p id="course_confirm" class="confirm course_confirm"></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="align-right">スタッフ：</td>
                                     <td>
-                                        <p id="staff_confirm" class="staff_confirm"></p>
+                                        <p class="confirm confirm-right">スタッフ：</p>
+                                    </td>
+                                    <td>
+                                        <p id="staff_confirm" class="confirm staff_confirm"></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="align-right">コメント：</td>
                                     <td>
-                                        <p id="detail_confirm" class="detail_confirm"></p>
+                                        <p class="confirm confirm-right">コメント：</p>
+                                    </td>
+                                    <td>
+                                        <p id="detail_confirm" class="confirm detail_confirm"></p>
                                     </td>
                                 </tr>
                             </table>
