@@ -38,6 +38,14 @@ body {
 
 /* Reserve Page */
 
+.form-index {
+    margin-bottom: 4px;
+}
+
+.course_about {
+    display: flex;
+}
+
 .input-area {
     margin: 0 auto;
     margin-bottom: 16px;
@@ -46,10 +54,6 @@ body {
 
 .input-area:last-child {
     text-align: center;
-}
-
-.form-index {
-    margin-bottom: 4px;
 }
 
 .textarea-large {

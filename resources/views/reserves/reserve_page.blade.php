@@ -12,6 +12,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
     <!-- ローカルJSファイル -->
     <script src="{{ asset('/js/reserve_modal_confirm.js') }}"></script>
+    <script src="{{ asset('/js/reserve_choice_course.js') }}"></script>
 
     <script>
         $(function() {
@@ -75,6 +76,16 @@
                         <option value="{{ $course->id }}">{{ $course->name }}</option>
                         @endforeach
                     </select>
+
+                    <!-- @foreach($courses as $course)
+                    <div class="course_about">
+                        <p>{{ $course->name }}</p>
+                        <p>{{ $course->time }}</p>
+                        <p>{{ $course->price }}</p>
+                    </div>
+                    @endforeach -->
+
+                    <!-- <p id="course_about" class="course_about"></p> -->
                 </div>
 
                 <div class="input-area">
