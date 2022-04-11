@@ -12,7 +12,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
     <!-- ローカルJSファイル -->
     <script src="{{ asset('/js/reserve_modal_confirm.js') }}"></script>
-    <script src="{{ asset('/js/reserve_choice_course.js') }}"></script>
+    <!-- <script src="{{ asset('/js/reserve_choice_course.js') }}"></script> -->
 
     <script>
         $(function() {
