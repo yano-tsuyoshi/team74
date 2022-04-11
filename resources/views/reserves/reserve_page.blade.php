@@ -70,12 +70,17 @@
 
                 <div class="input-area">
                     <p class="form-index">コースを選択してください</p>
-                    <select name="course_id" id="course_val">
-                        <option value="">選択してください</option>
-                        @foreach($courses as $course)
-                        <option value="{{ $course->id }}">{{ $course->name }}</option>
-                        @endforeach
-                    </select>
+                    @foreach($courses as $course)
+                    <div class="btn-select-grp">
+                        <input type="radio" value="{{ $course->id }}" name="course_id" id="course_id" class="visually-hidden"></input>
+                        <label for="course_id" class="btn-select">
+                            {{ $course->name }}
+                        </label>
+                        <p>{{ $course->time }}分</p>
+                        <p>{{ $course->price }}円</p>
+                    </div>
+                    @endforeach
+
 
                     <!-- @foreach($courses as $course)
                     <div class="course_about">
@@ -94,6 +99,7 @@
                         <option value="">選択してください</option>
                         @foreach($staffs as $staff)
                         <option value="{{ $staff->id }}">{{ $staff->name }}</option>
+                        <!-- らじょボタンはname属性がバラバラ→Name属性を統一 -->
                         @endforeach
                     </select>
                 </div>

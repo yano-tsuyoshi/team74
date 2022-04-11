@@ -42,8 +42,38 @@ body {
     margin-bottom: 4px;
 }
 
-.course_about {
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.btn-select {
+    border: 1px solid;
+    border-radius: 6px;
+    background-color: #cadfff;
+    padding: 8px 12px;
+}
+
+.btn-select:hover {
+    background-color: #f0e000;
+}
+
+.btn-select-grp {
     display: flex;
+}
+
+.btn-select-grp p {
+
+    margin: auto 0;
+    margin-left: 10px;
 }
 
 .input-area {

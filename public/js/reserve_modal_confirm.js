@@ -22,14 +22,11 @@ $(function () {
             var modal = $(this);
 
             // フォーム入力データをモーダル確認画面に表示
-            $("#date_confirm").text(date);
+            $('#date_confirm').text(date);
             $('#time_confirm').text(time);
-            $('#course_confirm').text(course); // ここでcourseを元にデータベースからコース名を取得したい
+            $('#course_confirm').text(course); // ここでcourseに入ったidをもとにデータベースからコース名を取得したい
             $('#staff_confirm').text(staff);
             $('#detail_confirm').text(detail);
-
-            // コース名取得テスト
-
 
             // 確認用
             console.log(date);
