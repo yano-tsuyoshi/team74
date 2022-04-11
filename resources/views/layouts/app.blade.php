@@ -40,7 +40,7 @@
 
 <body>
 
-    <!-- <div id="app">
+    <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -49,7 +49,7 @@
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="dropdown" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
-                </button> -->
+                </button> 
 
 
                 <div class=" navbar-collapse" id="navbarSupportedContent">
@@ -113,38 +113,42 @@
 
 
 
+        <div class="main">
+            <header id="header">
+                <h1 class="site-title">
+                    <a href="top"><img src="/images/sinkyurogo.png"></a>
+                </h1>
 
-        <header id="header">
-            <h1 class="site-title">
-                <a href="top"><img src="/images/sinkyurogo.png"></a>
-            </h1>
+                <nav id="navi">
+                    <ul class="nav-menu">
+                        <!-- <li> <a href="top">なんとか鍼灸院</a></li> -->
+                        <li> <a href="guide">鍼灸院詳細</a></li>
+                        <li> <a href="course">施術コース・料金</a></li>
+                        <li> <a href="reserve">予約</a></li>
 
-            <nav id="navi">
-                <ul class="nav-menu">
-                    <!-- <li> <a href="top">なんとか鍼灸院</a></li> -->
-                    <li> <a href="guide">鍼灸院詳細</a></li>
-                    <li> <a href="course">施術コース・料金</a></li>
-                    <li> <a href="reserve">予約</a></li>
+                    </ul>
+                    <ul class="nav-sns">
+                        <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank">facebook</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank">instagram</a></li>
+                    </ul>
+                </nav>
 
-                </ul>
-                <ul class="nav-sns">
-                    <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
-                    <li><a href="https://www.facebook.com/" target="_blank">facebook</a></li>
-                    <li><a href="https://www.instagram.com/" target="_blank">instagram</a></li>
-                </ul>
-            </nav>
+                <!-- <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div> -->
 
-            <!-- <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div> -->
+                <div id="mask"></div>
 
-            <div id="mask"></div>
+            </header>
+            <div class="dummysidebar">
 
-        </header>
+            </div>
+            @yield('content')
 
-        @yield('content')
+        </div>
 
         <!-- <main class="py-4">
             @yield('content')
