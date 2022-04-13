@@ -70,38 +70,40 @@
 
                 <div class="input-area">
                     <p class="form-index">コースを選択してください</p>
-                    @foreach($courses as $course)
-                    <div class="btn-select-grp">
-                        <input type="radio" value="{{ $course->id }}" name="course_id" id="course_id" class="visually-hidden"></input>
-                        <label for="course_id" class="btn-select">
-                            {{ $course->name }}
-                        </label>
-                        <p>{{ $course->time }}分</p>
-                        <p>{{ $course->price }}円</p>
+                    <div class="btn-lineup">
+                        @foreach($courses as $course)
+                        <div class="btn-select-grp">
+                            <input type="radio" value="{{ $course->id }}" name="course_id" id="course_{{ $course->id }}" class="visually-hidden"></input>
+                            <label for="course_{{ $course->id }}" class="btn-select">
+                                {{ $course->name }} {{ $course->time }}分
+                            </label>
+                            <p>{{ $course->price }}円</p>
+                            <p>{{ $course->detail }}</p>
+                        </div>
+                        @endforeach
                     </div>
-                    @endforeach
-
-
-                    <!-- @foreach($courses as $course)
-                    <div class="course_about">
-                        <p>{{ $course->name }}</p>
-                        <p>{{ $course->time }}</p>
-                        <p>{{ $course->price }}</p>
-                    </div>
-                    @endforeach -->
-
-                    <!-- <p id="course_about" class="course_about"></p> -->
                 </div>
 
                 <div class="input-area">
                     <p class="form-index">ご希望の施術スタッフを選択してください</p>
-                    <select name="staff_id" id="staff_val">
+                    <div class="btn-lineup staff">
+                        @foreach($staffs as $staff)
+                        <div class="btn-select-grp">
+                            <input type="radio" value="{{ $staff->id }}" name="staff_id" id="staff_{{ $staff->id }}" class="visually-hidden"></input>
+                            <label for="staff_{{ $staff->id }}" class="btn-select">
+                                {{ $staff->name }}
+                            </label>
+                        </div>
+                        @endforeach
+                    </div>
+
+                    <!-- <select name="staff_id" id="staff_val">
                         <option value="">選択してください</option>
                         @foreach($staffs as $staff)
                         <option value="{{ $staff->id }}">{{ $staff->name }}</option>
-                        <!-- らじょボタンはname属性がバラバラ→Name属性を統一 -->
+
                         @endforeach
-                    </select>
+                    </select> -->
                 </div>
 
                 <div class="input-area">
