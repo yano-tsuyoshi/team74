@@ -15,8 +15,8 @@ $(function () {
             // フォーム入力データを取得
             var date = $('#date_val').val();
             var time = $('#time_val').val();
-            var course = $('#course_val').val();
-            var staff = $('#staff_val').val();
+            var course = $("input[name='course_id']:checked").val();
+            var staff = $("input[name='staff_id']:checked").val();
             var detail = $('#detail_val').val();
 
             var modal = $(this);
