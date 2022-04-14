@@ -38,19 +38,6 @@ body {
 
 /* Reserve Page */
 
-.form-index {
-    margin-bottom: 4px;
-}
-
-label::after {
-    background-color: #ddd;
-    border-radius: 50%;
-    opacity: 0;
-    width: 16px;
-    height: 16px;
-    left: 7px
-}
-
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -65,19 +52,20 @@ label::after {
 }
 
 .btn-select {
-    border: 2px solid rgb(27, 0, 160);
+    border: 2px solid #0d6efd;
     border-radius: 6px;
-    background-color: #cadfff;
+    background-color: #fff;
     padding: 8px 12px;
     margin: 2px;
 }
 
 .btn-select:hover {
-    border: 2px solid #00c0e2;
+    cursor : pointer;
 }
 
-.btn-select:active {
-    background-color: #f0e000;
+.visually-hidden:checked+.btn-select {
+    background-color: #0d6efd;
+    color: #fff;
 }
 
 .btn-lineup {}
@@ -93,6 +81,10 @@ label::after {
 .btn-select-grp p {
     margin: auto 0;
     margin-left: 10px;
+}
+
+.form-index {
+    margin-bottom: 4px;
 }
 
 .input-area {
