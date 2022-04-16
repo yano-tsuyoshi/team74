@@ -5,7 +5,7 @@
 <head>
     <!-- CSS - Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <!-- CSS - jQuery for Calendar (DatePicker) -->
+    <!-- jQuery for Calendar (DatePicker) -->
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css">
     <!-- JavaScript / jQuery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -73,9 +73,9 @@
                     <div class="btn-lineup">
                         @foreach($courses as $course)
                         <div class="btn-select-grp">
-                            <input type="radio" value="{{ $course->id }}" name="course_id" id="course_{{ $course->id }}" class="visually-hidden"></input>
+                            <input type="radio" value="{{ $course->name }}" name="course_id" id="course_{{ $course->id }}" class="visually-hidden"></input>
                             <label for="course_{{ $course->id }}" class="btn-select">
-                                {{ $course->name }} {{ $course->time }}分
+                                {{ $course->name }}&nbsp;{{ $course->time }}分
                             </label>
                             <p>{{ $course->price }}円</p>
                             <p>{{ $course->detail }}</p>
@@ -96,14 +96,6 @@
                         </div>
                         @endforeach
                     </div>
-
-                    <!-- <select name="staff_id" id="staff_val">
-                        <option value="">選択してください</option>
-                        @foreach($staffs as $staff)
-                        <option value="{{ $staff->id }}">{{ $staff->name }}</option>
-
-                        @endforeach
-                    </select> -->
                 </div>
 
                 <div class="input-area">

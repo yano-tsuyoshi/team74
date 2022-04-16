@@ -60,7 +60,8 @@ body {
 }
 
 .btn-select:hover {
-    cursor : pointer;
+    cursor: pointer;
+    background-color: #e3eeff;
 }
 
 .visually-hidden:checked+.btn-select {

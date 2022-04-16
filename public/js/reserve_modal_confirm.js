@@ -24,7 +24,7 @@ $(function () {
             // フォーム入力データをモーダル確認画面に表示
             $('#date_confirm').text(date);
             $('#time_confirm').text(time);
-            $('#course_confirm').text(course); // ここでcourseに入ったidをもとにデータベースからコース名を取得したい
+            $('#course_confirm').text(course); // ここでcourseに入ったidをもとにデータベースからコース名を取得したい            
             $('#staff_confirm').text(staff);
             $('#detail_confirm').text(detail);
 

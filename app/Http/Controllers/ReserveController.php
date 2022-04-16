@@ -42,7 +42,6 @@ class ReserveController extends Controller
      */
     public function reserveDataStore(Request $request)
     {
-
         $this->validate($request, [
             'date' => 'required',
             'time' => 'required',
