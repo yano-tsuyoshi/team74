@@ -14,11 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('courses', function (Blueprint $table) {
-            $table->increments('id')->comment('');
-            $table->string('course_name')->comment('コース名');
-            $table->string('course_detail')->comment('コース内容');
-            $table->string('course_time')->comment('コース時間');
-            $table->string('price')->comment('コース料金');
+            $table->increments('id');
+            $table->string('name')->comment('コース名');
+            $table->string('detail')->comment('コース内容');
+            $table->unsignedBigInteger('time')->comment('コース時間');
+            $table->unsignedBigInteger('price')->comment('コース料金');
         });
     }
 
