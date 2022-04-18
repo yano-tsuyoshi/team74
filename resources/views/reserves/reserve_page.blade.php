@@ -73,7 +73,7 @@
                     <div class="btn-lineup">
                         @foreach($courses as $course)
                         <div class="btn-select-grp">
-                            <input type="radio" value="{{ $course->name }}" name="course_id" id="course_{{ $course->id }}" class="visually-hidden"></input>
+                            <input type="radio" value="{{ $course->id }}" name="course_id" id="course_{{ $course->id }}" class="visually-hidden"></input>
                             <label for="course_{{ $course->id }}" class="btn-select">
                                 {{ $course->name }}&nbsp;{{ $course->time }}分
                             </label>
@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="input-area">
-                    <p class="form-index">ご希望の施術スタッフを選択してください</p>
+                    <p class="form-index">施術スタッフを選択してください</p>
                     <div class="btn-lineup staff">
                         @foreach($staffs as $staff)
                         <div class="btn-select-grp">
@@ -143,6 +143,9 @@
                                     </td>
                                     <td>
                                         <p id="course_confirm" class="confirm course_confirm"></p>
+                                        <?php 
+                                        // $course->id = $course->name
+                                        ?>
                                     </td>
                                 </tr>
                                 <tr>
