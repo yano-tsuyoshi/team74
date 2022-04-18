@@ -92,4 +92,26 @@ class RegisterController extends Controller
     {
         return view(register.blade.php);
     }
+
+    protected function registerValidator(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|between:0,15',
+            'password' => 'required',
+        ]);
+        
+        $admin = new admin();
+        $admin->name = $request->name;
+        $admin->password = $request->password;
+        $admin->save();
+
+
+        return redirect('/register/home');
+    }
+
+    //管理者画面へ
+    public function adminHome()
+    {
+        return view('register_home');
+    }
 }
