@@ -17,9 +17,10 @@ use App\Http\Controllers\StaffController;
 */
 
 // ホーム画面
-Route::get('/', function () {
+Route::get('/top', function () {
     return view('teams/index');
-});
+})->name('top');
+
 
 // 予約登録画面（西田）
 Route::get('reserve', [ReserveController::class, 'reservePageShow']);
@@ -30,17 +31,28 @@ Route::get('reserve_show', [ReserveListController::class, 'userDataShow']);
 Route::get('reserve_show', [ReserveListController::class, 'reserveShow']);
 Route::get('reserve_show', [ReserveListController::class, 'reserveIndex']);
 
+
+
+// 案内画面
+Route::get('/guide', [App\Http\Controllers\HomeController::class, 'guide'])->name('guide');
+// 施術コース
+Route::get('/course', [App\Http\Controllers\HomeController::class, 'course'])->name('course');
+// 料金
+Route::get('/price', [App\Http\Controllers\HomeController::class, 'price'])->name('price');
+
 //以下マルチログイン
-// Auth::routes();
-// ユーザー側　一般画面
+Auth::routes();
+// ユーザー側 一般画面
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // 管理者ログイン画面
 Route::get('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'showAdminLoginForm']);
 // 管理者登録画面
 Route::get('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'showAdminRegisterForm']);
+Route::get('/register/home',[App\Http\Controllers\Auth\RegisterController::class, 'adminHome']);
 
 Route::post('/login/admin', [App\Http\Controllers\Auth\LoginController::class, 'adminLogin']);
-Route::post('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'registerAdmin'])->name('admin-register');
+Route::post('/register/admin', [App\Http\Controllers\Auth\RegisterController::class, 'registerAdmin']);
+Route::post('/register_validator', [App\Http\Controllers\Auth\RegisterController::class, 'registerValidator']);
 
 Route::view('/admin', 'admin')->middleware('auth:admin')->name('admin-home');
