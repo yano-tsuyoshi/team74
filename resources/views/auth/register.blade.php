@@ -8,11 +8,9 @@
                 <div class="card-header">{{ isset($authgroup) ? ucwords($authgroup) : ""}} {{ __('Register') }}</div>
 
                 <div class="card-body">
-                    @isset($authgroup)
-                    <form method="POST" action="{{ url("register/$authgroup") }}">
-                    @else
-                    <form method="POST" action="{{ route('register') }}">
-                    @endisset
+          
+                    <form method="POST" action="{{ '/register_validator' }}">
+                    
                         @csrf
 
                         <div class="row mb-3">
