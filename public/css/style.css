@@ -1,18 +1,15 @@
-body {
-    color: #121212;
-  }
-  
   a {
     color: #121212;
-    /* text-decoration: none; */
   }
-  img {
+  .rogoimg {
       width: 150px;
       height: 150px;
       vertical-align: bottom;
-    
   }
+
   .topimg{
+      width: 500px;
+      height: 500px;
       text-align: center;
   }
 
@@ -27,13 +24,13 @@ body {
   }
   
   /* サイドメニューの横幅分だけ左にmarginをとる */
-  .container {
+  .toppage{
     margin: auto;
   }
   
-  .container h1 {
+  .toppage h1 {
       text-align: center;
-      margin-top: 5%;
+      margin-top: 3%;
     }
   
   .main{
@@ -54,7 +51,6 @@ body {
   }
   .site-title {
     width: 200px;
-    /* line-height: 1px; */
     margin-bottom: 30px;
   }
   .site-title a {
@@ -91,7 +87,7 @@ body {
     padding: 0px 15px 30px 15px;
     /* padding: 0px 50px 30px 45px; */
     position: fixed;
-    top: 57px;
+    top: 0;
     /* 画面の高さが低くてメニューが隠れてしまった場合に、縦スクロールが出るよう設定 */
     overflow-y: auto;
     background-color: aqua;
@@ -106,7 +102,7 @@ body {
     padding: 8px 0;
   }
 
-  
+  /* 施術料金画面 */
   .course{
     padding-left: 25%;
   }
@@ -121,5 +117,76 @@ body {
     display: flex;
     margin: auto;
     font-size: 30px;
+  }
+
+
+  /* スタッフ紹介画面 */
+  .guide{
+    text-align: center;
+  }
+
+  .flex{
+    margin: 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+  .flex .textarea{
+    width: 50%;
+    }
+
+  .flex .imgarea{
+      width: 50%;
+  }
+
+
+  /* 診療時間 */
+  thead, tbody, tfoot, tr, td, th{
+    border-width: 1px;
+  }
+  .signboard{
+    margin: auto;
+    width: 350px;
+    height: 200px;
+  }
+  .signboard1{
+    font-size: 20px;
+  }
+  .signboard2{
+    background: #0f2e84 !important;
+  }
+  .th-white-str{
+    color: #fff;
+  }
+  
+  /* フッター */
+  .footerflex{
+    display: flex;
+    margin: auto;
+  }
+  .footer{
+    margin-top: 5%;
+  }
+  .footer li{
+    list-style: none;
+  }
+
+  .footer1 li{
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .footer2{
+    padding-left: 10%;
+  }
+  
+
+  .footer-d{
+    background: #0f2e84 !important;
+    color: #fff;
+    border-radius :8px;/*角の丸み*/
+    box-shadow :0px 0px 5px silver;/*5px=影の広がり具合*/
+    padding: 0.5em 0.5em 0.5em 2em;
+    line-height: 1.5;
+    padding: 0.5em 0;
   }
   

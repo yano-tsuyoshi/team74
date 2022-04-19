@@ -38,6 +38,8 @@ Route::get('/guide', [App\Http\Controllers\HomeController::class, 'guide'])->nam
 Route::get('/course', [App\Http\Controllers\HomeController::class, 'course'])->name('course');
 // 料金
 Route::get('/price', [App\Http\Controllers\HomeController::class, 'price'])->name('price');
+//アクセス
+Route::get('/access', [App\Http\Controllers\HomeController::class, 'access'])->name('access');
 
 //以下マルチログイン
 Auth::routes();

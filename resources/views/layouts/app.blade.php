@@ -116,15 +116,16 @@
         <div class="main">
             <header id="header">
                 <h1 class="site-title">
-                    <a href="top"><img src="/images/sinkyurogo.png"></a>
+                    <a href="top"><img class="rogoimg" src="/images/sinkyurogo.png"></a>
                 </h1>
 
                 <nav id="navi">
                     <ul class="nav-menu">
                         <!-- <li> <a href="top">なんとか鍼灸院</a></li> -->
-                        <li> <a href="guide">鍼灸院詳細</a></li>
+                        <li> <a href="guide">スタッフ紹介</a></li>
                         <li> <a href="course">施術コース・料金</a></li>
                         <li> <a href="reserve">予約</a></li>
+                        <li> <a href="access">アクセス</a></li>
 
                     </ul>
                     <ul class="nav-sns">
@@ -149,10 +150,6 @@
             @yield('content')
 
         </div>
-
-        <!-- <main class="py-4">
-            @yield('content')
-        </main> -->
 
     </div>
 </body>
