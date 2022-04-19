@@ -140,7 +140,7 @@
   }
 
 
-  /* 診療時間 */
+  /* 診療時間 フッター*/
   thead, tbody, tfoot, tr, td, th{
     border-width: 1px;
   }
@@ -159,10 +159,12 @@
     color: #fff;
   }
   
-  /* フッター */
   .footerflex{
     display: flex;
     margin: auto;
+    padding-left: 25%;
+    background-color: papayawhip;
+    border: solid;
   }
   .footer{
     margin-top: 5%;
@@ -178,7 +180,6 @@
   .footer2{
     padding-left: 10%;
   }
-  
 
   .footer-d{
     background: #0f2e84 !important;
