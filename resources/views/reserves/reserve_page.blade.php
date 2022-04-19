@@ -75,9 +75,9 @@
                         <div class="btn-select-grp">
                             <input type="radio" value="{{ $course->id }}" name="course_id" id="course_{{ $course->id }}" class="visually-hidden"></input>
                             <label for="course_{{ $course->id }}" class="btn-select">
-                                {{ $course->name }}&nbsp;{{ $course->time }}分
+                                <span id="name_course_{{ $course->id }}">{{ $course->name }}&nbsp;{{ $course->time }}分</span>
                             </label>
-                            <p>{{ $course->price }}円</p>
+                            <p id="price_course_{{ $course->id }}">{{ $course->price }}円</p>
                             <p>{{ $course->detail }}</p>
                         </div>
                         @endforeach
@@ -91,7 +91,7 @@
                         <div class="btn-select-grp">
                             <input type="radio" value="{{ $staff->id }}" name="staff_id" id="staff_{{ $staff->id }}" class="visually-hidden"></input>
                             <label for="staff_{{ $staff->id }}" class="btn-select">
-                                {{ $staff->name }}
+                                <span id="name_staff_{{ $staff->id }}">{{ $staff->name }}</span>
                             </label>
                         </div>
                         @endforeach
@@ -142,10 +142,15 @@
                                         <p class="confirm confirm-right">コース：</p>
                                     </td>
                                     <td>
-                                        <p id="course_confirm" class="confirm course_confirm"></p>
-                                        <?php 
-                                        // $course->id = $course->name
-                                        ?>
+                                        <p id="c_name_confirm" class="confirm c_name_confirm"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="confirm confirm-right">料金：</p>
+                                    </td>
+                                    <td>
+                                        <p id="c_price_confirm" class="confirm c_price_confirm"></p>
                                     </td>
                                 </tr>
                                 <tr>
