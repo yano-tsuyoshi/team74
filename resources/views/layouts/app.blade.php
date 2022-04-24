@@ -155,13 +155,13 @@
     <address class="footer">
         <ul class="footer1">
 
-            <li><span class="footer-d">ご予約優先制</span> <span class="footer-d">土・祝日診療</span></li>
+            <li><span class="footer-d">ご予約優先制</span> <span class="footer-d">保険対応可能</span></li>
 
             <li><span class="footer-d">木曜休診</span> <span class="footer-d">往診できます</span></li>
 
         </ul>
         <p class="footer2">鍼灸保険取扱・鍼灸治療・手技療法<br>
-            予防医療、四十肩・五十肩、腰痛・ぎっくり腰</p>
+            リウマチ・五十肩、腰痛症<br>神経痛・頚腕症候群</p>
         <ul class="footer3">
             <li class="font-size-1">〒551-0000</li>
             <li class="font-size-1 mb-3">大阪府豊中市１−１−１</li>

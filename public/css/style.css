@@ -124,9 +124,20 @@
   .guide{
     text-align: center;
   }
+  .guide h1{
+    padding-top: 2%;
+  }
+  .guide b{
+    font-size: 20px;
+  }
+
+  .intyouimg{
+    width: 250px;
+    height: 250px;
+  }
 
   .flex{
-    margin: 10%;
+    margin: 5% 10%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -137,7 +148,60 @@
 
   .flex .imgarea{
       width: 50%;
+      padding-left: 5%;
   }
+
+  .textarea{
+    position: relative;
+    padding:0.25em 1em;
+    width: 50%;
+  }
+
+  .textarea:before,.textarea:after{ 
+      content:'';
+      width: 20px;
+      height: 30px;
+      position: absolute;
+      display: inline-block;
+  }
+  .textarea:before{
+      border-left: solid 1px #5767bf;
+      border-top: solid 1px #5767bf;
+      top:0;
+      left: 0;
+  }
+  .textarea:after{
+      border-right: solid 1px #5767bf;
+      border-bottom: solid 1px #5767bf;
+      bottom:0;
+      right: 0;
+  }
+  .textarea p {
+      margin: 0; 
+      padding: 0;
+  }
+
+  .staff{
+    margin: 5% 10%;
+  }
+  .flexA{
+    display: flex;
+  }
+  .imgareaA{
+    width: 50%;
+  }
+  
+
+  .flexB{
+    display: flex;
+    padding-top: 5%;
+  }
+
+  .imgareaB{
+    width: 50%;
+  }
+
+  
 
 
   /* 診療時間 フッター*/
@@ -178,7 +242,7 @@
     margin-bottom: 5%;
   }
   .footer2{
-    padding-left: 10%;
+    padding-left: 13%;
   }
 
   .footer-d{
@@ -188,6 +252,6 @@
     box-shadow :0px 0px 5px silver;/*5px=影の広がり具合*/
     padding: 0.5em 0.5em 0.5em 2em;
     line-height: 1.5;
-    padding: 0.5em 0;
+    padding: 0.2em 0;
   }
   
