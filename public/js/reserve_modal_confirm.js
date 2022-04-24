@@ -14,7 +14,7 @@ $(function () {
 
             // フォーム入力データを取得
             var date = $('#date_val').val();
-            var time = $('#time_val').val();
+            var time = $('#time_val option:selected').text();
             var course_id = $('[name="course_id"]:checked').attr('id');
             var c_name = $('#name_' + course_id).text();
             var c_price = $('#price_' + course_id).text();

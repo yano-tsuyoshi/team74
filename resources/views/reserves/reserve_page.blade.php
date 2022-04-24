@@ -4,7 +4,7 @@
 
 <head>
     <!-- CSS - Bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
     <!-- jQuery for Calendar (DatePicker) -->
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css">
     <!-- JavaScript / jQuery -->
@@ -12,7 +12,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
     <!-- ローカルJSファイル -->
     <script src="{{ asset('/js/reserve_modal_confirm.js') }}"></script>
-    <!-- <script src="{{ asset('/js/reserve_choice_course.js') }}"></script> -->
 
     <script>
         $(function() {
@@ -37,16 +36,18 @@
             <h1 class="top-title">予約フォーム</h1>
             <form method="POST" action="{{ url('reserve') }}">
                 {{ csrf_field() }}
-                <p>
-                    ユーザーID：<?php echo $user->id; ?><br>
-                    予約者名：<?php echo $user->name; ?><br>
-                    予約内容を確認したい場合はこちら：<a href="reserve_show">予約一覧</a>
-                </p>
-                <input type="hidden" value="<?php echo $user->id; ?>" name="user_id" id="user_id">
-                <input type="hidden" value="<?php echo $user->name; ?>" name="name" id="name">
-
-                <p class="form-index">カレンダーから日付を選択してください</p>
                 <div class="input-area">
+                    <p>
+                        ユーザーID：<?php echo $user->id; ?><br>
+                        予約者名：<?php echo $user->name; ?><br>
+                        予約内容を確認したい場合はこちら：<a href="reserve_show">予約一覧</a>
+                    </p>
+                    <input type="hidden" value="<?php echo $user->id; ?>" name="user_id" id="user_id">
+                    <input type="hidden" value="<?php echo $user->name; ?>" name="name" id="name">
+                </div>
+
+                <div class="input-area">
+                    <p class="form-index">カレンダーから日付を選択してください</p>
                     <div id="datepicker" class="date-picker"></div>
                     <input type="text" name="date" id="date_val">
                 </div>
@@ -55,16 +56,26 @@
                     <p class="form-index">時間帯を選択してください</p>
                     <select name="time" id="time_val">
                         <option value="">選択してください</option>
-                        <option value="10:00:00">10:00</option>
-                        <option value="11:00:00">11:00</option>
-                        <option value="12:00:00">12:00</option>
-                        <option value="13:00:00">13:00</option>
-                        <option value="14:00:00">14:00</option>
-                        <option value="15:00:00">15:00</option>
-                        <option value="16:00:00">16:00</option>
-                        <option value="17:00:00">17:00</option>
-                        <option value="18:00:00">18:00</option>
-                        <option value="18:00:00">19:00</option>
+                        <option value="10:00:00">10時</option>
+                        <option value="10:30:00">10時30分</option>
+                        <option value="11:00:00">11時</option>
+                        <option value="11:03:00">11時30分</option>
+                        <option value="12:00:00">12時</option>
+                        <option value="12:03:00">12時30分</option>
+                        <option value="13:00:00">13時</option>
+                        <option value="13:03:00">13時30分</option>
+                        <option value="14:00:00">14時</option>
+                        <option value="14:03:00">14時30分</option>
+                        <option value="15:00:00">15時</option>
+                        <option value="15:03:00">15時30分</option>
+                        <option value="16:00:00">16時</option>
+                        <option value="16:03:00">16時30分</option>
+                        <option value="17:00:00">17時</option>
+                        <option value="17:03:00">17時30分</option>
+                        <option value="18:00:00">18時</option>
+                        <option value="18:03:00">18時30分</option>
+                        <option value="19:00:00">19時</option>
+                        <option value="19:03:00">19時30分</option>
                     </select>
                 </div>
 

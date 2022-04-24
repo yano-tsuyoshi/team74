@@ -23,6 +23,10 @@ body {
 
 /* Parts */
 
+select {
+    border: 1px solid #242424;
+}
+
 .btn-primary .btn-secondary {
     width: fit-content;
 }
@@ -86,6 +90,8 @@ body {
 
 .form-index {
     margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .input-area {
@@ -99,6 +105,7 @@ body {
 }
 
 .textarea-large {
+    border: 1px solid black;
     width: 500px;
     height: 300px;
     vertical-align: top;
