@@ -61,6 +61,6 @@ class ReserveController extends Controller
             'detail' => $request->detail,
         ]);
 
-        return redirect('/');
+        return redirect('top');
     }
 }

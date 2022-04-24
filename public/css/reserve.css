@@ -55,6 +55,31 @@ select {
     margin: -1px;
 }
 
+.display-flex {
+    display: flex;
+}
+
+/* Date & Time */
+
+.btn-time {
+    border: 1px solid #242424;
+    width: fit-content;padding: 10px 12px;
+}
+
+.btn-time:hover {
+    cursor: pointer;
+    background-color: #e1e1e1;
+}
+
+.visually-hidden:checked+.btn-time {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.table-time {margin-left: 28px;}
+
+/* Course */
+
 .btn-select {
     border: 2px solid #0d6efd;
     border-radius: 6px;
@@ -95,9 +120,9 @@ select {
 }
 
 .input-area {
-    margin: 0 auto;
+    margin: 0px auto;
     margin-bottom: 16px;
-    width: 600px;
+    width: 640px;
 }
 
 .input-area:last-child {
@@ -115,19 +140,17 @@ select {
 /* datePicker */
 
 .date-picker {
-    justify-content: center;
-    margin: 0 -60px;
-    margin-bottom: 24px;
-    width: fit-content;
+    justify-content: center;    
+    margin-bottom: 24px;    
 }
 
 .date-picker tbody * {
-    height: 70px;
+    height: 66px;
     text-align: center;
 }
 
 .ui-datepicker-inline {
-    width: 640px;
+    width: 430px;
 }
 
 .ui-datepicker-inline .a {

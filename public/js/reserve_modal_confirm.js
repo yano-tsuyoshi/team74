@@ -14,7 +14,8 @@ $(function () {
 
             // フォーム入力データを取得
             var date = $('#date_val').val();
-            var time = $('#time_val option:selected').text();
+            // var time = $('#time_val option:selected').text();
+            var time = $('[name="time"]:checked').attr('value');
             var course_id = $('[name="course_id"]:checked').attr('id');
             var c_name = $('#name_' + course_id).text();
             var c_price = $('#price_' + course_id).text();
@@ -23,6 +24,12 @@ $(function () {
             var detail = $('#detail_val').val();
 
             var modal = $(this);
+
+            // var year = date.getFullYear();
+            // var month = date.getMonth() + 1;
+            // var day = date.getDate();
+
+            // date_view = (year + '年' + month + '月' + day + '日');
 
             // フォーム入力データをモーダル確認画面に表示
             $('#date_confirm').text(date);
