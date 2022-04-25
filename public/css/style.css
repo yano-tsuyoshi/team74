@@ -1,0 +1,125 @@
+body {
+    color: #121212;
+  }
+  
+  a {
+    color: #121212;
+    /* text-decoration: none; */
+  }
+  img {
+      width: 150px;
+      height: 150px;
+      vertical-align: bottom;
+    
+  }
+  .topimg{
+      text-align: center;
+  }
+
+  .seitaiimg{
+    width: 200px;
+    height: 200px;
+  }
+
+  .hariimg{
+    width: 200px;
+    height: 200px;
+  }
+  
+  /* サイドメニューの横幅分だけ左にmarginをとる */
+  .container {
+    margin: auto;
+  }
+  
+  .container h1 {
+      text-align: center;
+      margin-top: 5%;
+    }
+  
+  .main{
+      display: flex; 
+
+  }
+    /* サイドバーの下にダミーバー */
+  .dummysidebar{
+      width: 180px;
+  }
+  
+  
+  /* コンテンツ幅を設定するための共通クラス */
+  .wrapper {
+    max-width: 900px;
+    padding: 80px 20px;
+    margin: 0 auto;
+  }
+  .site-title {
+    width: 200px;
+    /* line-height: 1px; */
+    margin-bottom: 30px;
+  }
+  .site-title a {
+    display: block;
+  }
+  /*
+  セクションタイトル用の共通クラス
+  両サイドの線は疑似要素で作成して、Flexboxで横並びに配置
+  ※beforeが左の線、afterが右の線
+  */
+  .sec-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.75rem;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  .sec-title::before,
+  .sec-title::after {
+    border-top: 1px solid;
+    content: "";
+    width: 28%;
+  }
+  
+  /*-------------------------------------------
+  サイドバー
+  -------------------------------------------*/
+  
+  #header {
+    width: 180px;
+    height: 100%;
+    background-color: #fff;
+    padding: 0px 15px 30px 15px;
+    /* padding: 0px 50px 30px 45px; */
+    position: fixed;
+    top: 57px;
+    /* 画面の高さが低くてメニューが隠れてしまった場合に、縦スクロールが出るよう設定 */
+    overflow-y: auto;
+    background-color: aqua;
+    justify-content: center;
+    padding-top: 3%;
+  }
+  #header .nav-menu {
+    margin-bottom: 60px;
+  }
+  #header li {
+    font-size: 0.875rem;
+    padding: 8px 0;
+  }
+
+  
+  .course{
+    padding-left: 25%;
+  }
+  
+  .course1{
+    display: flex;
+    margin: auto;
+    font-size: 30px;
+  }
+
+  .course2{
+    display: flex;
+    margin: auto;
+    font-size: 30px;
+  }
+  
