@@ -12,26 +12,26 @@ class StaffController extends Controller
        
        $staff = Staff::all();
        
-        return view('top',compact('staff'));
+        return view('staffs/top',compact('staff'));
     }
    
    
    /**管理者登録 */
    
     public function register(){
-        return view('register');
+        return view('staffs/register');
     }
 
 
     public function staffRegister(Request $request){
 
         $staff = new Staff();
-        $staff->name = $request->name;
-        $staff->save();
-        
+        $staff->name = $request->name;			
+        $staff->save();			
+
         
 
-        return redirect('/top');
+        return redirect('staffs/top');
     }
 
     /**編集機能 */
@@ -40,7 +40,7 @@ class StaffController extends Controller
         
         $staff = Staff::where('id','=', $request->id)->first();
         
-        return view('edit')->with([
+        return view('staffs/edit')->with([
             'staff' =>$staff,
         ]);
        
@@ -58,7 +58,7 @@ class StaffController extends Controller
         
         
 
-        return redirect('/top');
+        return redirect('staffs/top');
 
     }
 
@@ -73,7 +73,7 @@ public function staffDelete(Request $request){
         
         
 
-        return redirect('/top');
+        return redirect('staffs/top');
 
     }
 
