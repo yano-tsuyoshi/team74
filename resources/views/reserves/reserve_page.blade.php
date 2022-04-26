@@ -47,122 +47,114 @@
                 </div>
 
                 <div class="input-area">
-                    <p class="form-index">カレンダーから日付を選択してください</p>
-                    <div class="display-flex">
+                    <p class="form-index">日付と時刻を選択してください</p>
+                    <div class="date-time-area">
                         <!-- Calendar -->
                         <div id="datepicker" class="date-picker"></div>
                         <input type="text" name="date" id="date_val" class="visually-hidden">
                         <!-- Time Select -->
                         <table class="table-time">
-                            <td class="display-flex">
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="10:00:00" name="time" id="time_val" class="visually-hidden">10時</input>
-                                </label>
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="10:30:00" name="time" id="time_val" class="visually-hidden">10時30分</input>
-                                </label>
-                            </td>
-                            <td class="display-flex">
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="11:00:00" name="time" id="time_val" class="visually-hidden">11時</input>
-                                </label>
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="11:30:00" name="time" id="time_val" class="visually-hidden">11時30分</input>
-                                </label>
-                            </td>
-                            <td class="display-flex">
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="12:00:00" name="time" id="time_val" class="visually-hidden">12時</input>
-                                </label>
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="12:30:00" name="time" id="time_val" class="visually-hidden">12時30分</input>
-                                </label>
-                            </td>
-                            <td class="display-flex">
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="13:00:00" name="time" id="time_val" class="visually-hidden">13時</input>
-                                </label>
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="13:30:00" name="time" id="time_val" class="visually-hidden">13時30分</input>
-                                </label>
-                            </td>
-                            <td class="display-flex">
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="14:00:00" name="time" id="time_val" class="visually-hidden">14時</input>
-                                </label>
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="14:30:00" name="time" id="time_val" class="visually-hidden">14時30分</input>
-                                </label>
-                            </td>
-                            <td class="display-flex">
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="15:00:00" name="time" id="time_val" class="visually-hidden">15時</input>
-                                </label>
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="15:30:00" name="time" id="time_val" class="visually-hidden">15時30分</input>
-                                </label>
-                            </td>
-                            <td class="display-flex">
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="16:00:00" name="time" id="time_val" class="visually-hidden">16時</input>
-                                </label>
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="16:30:00" name="time" id="time_val" class="visually-hidden">16時30分</input>
-                                </label>
-                            </td>
-                            <td class="display-flex">
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="17:00:00" name="time" id="time_val" class="visually-hidden">17時</input>
-                                </label>
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="17:30:00" name="time" id="time_val" class="visually-hidden">17時30分</input>
-                                </label>
-                            </td>
-                            <td class="display-flex">
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="18:00:00" name="time" id="time_val" class="visually-hidden">18時</input>
-                                </label>
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="18:30:00" name="time" id="time_val" class="visually-hidden">18時30分</input>
-                                </label>
-                            </td>
-                            <td class="display-flex">
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="19:00:00" name="time" id="time_val" class="visually-hidden">19時</input>
-                                </label>
-                                <label for="time_val" class="btn-time">
-                                    <input type="radio" value="19:30:00" name="time" id="time_val" class="visually-hidden">19時30分</input>
-                                </label>
-                            </td>
+                            <tr>
+                                <td>
+                                    <input type="radio" value="10:00:00" name="time" id="time10_00" class="visually-hidden"></input>
+                                    <label for="time10_00" class="btn-time">10時</label>
+                                </td>
+                                <td>
+                                    <input type="radio" value="10:30:00" name="time" id="time10_30" class="visually-hidden"></input>
+                                    <label for="time10_30" class="btn-time">10時30分</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" value="11:00:00" name="time" id="time11_00" class="visually-hidden"></input>
+                                    <label for="time11_00" class="btn-time">11時</label>
+                                </td>
+                                <td>
+                                    <input type="radio" value="11:30:00" name="time" id="time11_30" class="visually-hidden"></input>
+                                    <label for="time11_30" class="btn-time"> 11時30分</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" value="12:00:00" name="time" id="time12_00" class="visually-hidden"></input>
+                                    <label for="time12_00" class="btn-time">12時</label>
+                                </td>
+                                <td>
+                                    <input type="radio" value="12:30:00" name="time" id="time12_30" class="visually-hidden"></input>
+                                    <label for="time12_30" class="btn-time">12時30分</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" value="13:00:00" name="time" id="time13_00" class="visually-hidden"></input>
+                                    <label for="time13_00" class="btn-time">13時</label>
+                                </td>
+                                <td>
+                                    <input type="radio" value="13:30:00" name="time" id="time13_30" class="visually-hidden"></input>
+                                    <label for="time13_30" class="btn-time"> 13時30分</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" value="14:00:00" name="time" id="time14_00" class="visually-hidden"></input>
+                                    <label for="time14_00" class="btn-time">14時</label>
+                                </td>
+                                <td>
+                                    <input type="radio" value="14:30:00" name="time" id="time14_30" class="visually-hidden"></input>
+                                    <label for="time14_30" class="btn-time">14時30分</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" value="15:00:00" name="time" id="time15_00" class="visually-hidden"></input>
+                                    <label for="time15_00" class="btn-time">15時</label>
+                                </td>
+                                <td>
+                                    <input type="radio" value="15:30:00" name="time" id="time15_30" class="visually-hidden"></input>
+                                    <label for="time15_30" class="btn-time"> 15時30分</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" value="16:00:00" name="time" id="time16_00" class="visually-hidden"></input>
+                                    <label for="time16_00" class="btn-time">16時</label>
+                                </td>
+                                <td>
+                                    <input type="radio" value="16:30:00" name="time" id="time16_30" class="visually-hidden"></input>
+                                    <label for="time16_30" class="btn-time">16時30分</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" value="17:00:00" name="time" id="time17_00" class="visually-hidden"></input>
+                                    <label for="time17_00" class="btn-time">17時</label>
+                                </td>
+                                <td>
+                                    <input type="radio" value="17:30:00" name="time" id="time17_30" class="visually-hidden"></input>
+                                    <label for="time17_30" class="btn-time"> 17時30分</label>
+                                </td>
+                            <tr>
+                                <td>
+                                    <input type="radio" value="18:00:00" name="time" id="time18_00" class="visually-hidden"></input>
+                                    <label for="time18_00" class="btn-time">18時</label>
+                                </td>
+                                <td>
+                                    <input type="radio" value="18:30:00" name="time" id="time18_30" class="visually-hidden"></input>
+                                    <label for="time18_30" class="btn-time">18時30分</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" value="19:00:00" name="time" id="time19_00" class="visually-hidden"></input>
+                                    <label for="time19_00" class="btn-time">19時</label>
+                                </td>
+                                <td>
+                                    <input type="radio" value="19:30:00" name="time" id="time19_30" class="visually-hidden"></input>
+                                    <label for="time19_30" class="btn-time"> 19時30分</label>
+                                </td>
+                            </tr>
                         </table>
                     </div>
-                </div> <!-- display-flex -->
-
-                <!-- <div class="input-area">
-                    <p class="form-index">時間帯を選択してください</p>
-                    <select name="time" id="time_val">
-                        <option value="">選択してください</option>
-                        <option value="10:00:00">10時</option>
-                        <option value="10:30:00">10時30分</option>
-                        <option value="11:00:00">11時</option>
-                        <option value="11:03:00">11時30分</option>
-                        <option value="12:00:00">12時</option>
-                        <option value="12:03:00">12時30分</option>
-                        <option value="13:00:00">13時</option>
-                        <option value="13:03:00">13時30分</option>
-                        <option value="14:00:00">14時</option>
-                        <option value="14:03:00">14時30分</option>
-                        <option value="15:00:00">15時</option>
-                        <option value="15:03:00">15時30分</option>
-                        <option value="16:00:00">16時</option>
-                        <option value="16:03:00">16時30分</option>
-                        <option value="17:00:00">17時</option>
-                        <option value="17:03:00">17時30分</option>
-                        <option value="18:00:00">18時</option>
-                        <option value="18:03:00">18時30分</option>
-                        <option value="19:00:00">19時</option>
-                        <option value="19:30:00">19時30分</option>
-                    </select> -->
                 </div>
 
                 <div class="input-area">
@@ -200,7 +192,9 @@
                     <textarea value="" name="detail" id="detail_val" class="textarea-large"></textarea>
                 </div>
                 <div class="input-area">
-                    <button class="js-modal-open btn-primary" href="" data-target="confirmModal">予約確認</button>
+                    <div class="btn-box">
+                        <button class="js-modal-open btn btn-primary" href="" data-target="confirmModal">予約確認</button>
+                    </div>
                 </div>
 
                 <div class="modal js-modal" id="confirmModal">
@@ -269,9 +263,9 @@
                             </table>
                         </div>
                         <div class="input-area">
-                            <div class="btns-box">
-                                <button type="reset" class="btn-secondary js-modal-close">キャンセル</button>
-                                <button type="submit" class="btn-primary">予約する</button>
+                            <div class="btn-box">
+                                <button type="reset" class="btn btn-secondary js-modal-close">キャンセル</button>
+                                <button type="submit" class="btn btn-primary">予約する</button>
                             </div>
                         </div>
                     </div>
