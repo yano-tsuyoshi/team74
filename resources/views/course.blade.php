@@ -3,7 +3,7 @@
 @section('content')
  
 <div class="course">
-    <div class="">
+    <div class="course-top">
         <h1>施術コース</h1>
     </div>
 

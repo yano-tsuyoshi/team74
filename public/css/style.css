@@ -102,9 +102,67 @@
     padding: 8px 0;
   }
 
+  /* 診療時間 フッター*/
+  thead, tbody, tfoot, tr, td, th{
+    border-width: 1px;
+  }
+  .signboard{
+    margin: auto;
+    width: 350px;
+    height: 200px;
+  }
+  .signboard1{
+    font-size: 20px;
+    text-align: center;
+  }
+  .signboard2{
+    background: #0f2e84 !important;
+    
+  }
+  .th-white-str{
+    color: #fff;
+  }
+  
+  .footerflex{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    padding-left: 25%;
+    background-color: papayawhip;
+    border: solid;
+  }
+  .footer{
+    margin-top: 5%;
+  }
+  .footer li{
+    list-style: none;
+  }
+
+  .footer1 li{
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .footer2{
+    padding-left: 13%;
+  }
+
+  .footer-d{
+    background: #0f2e84 !important;
+    color: #fff;
+    border-radius :8px;/*角の丸み*/
+    box-shadow :0px 0px 5px silver;/*5px=影の広がり具合*/
+    padding: 0.5em 0.5em 0.5em 2em;
+    line-height: 1.5;
+    padding: 0.2em 0;
+  }
+  
+
   /* 施術料金画面 */
   .course{
     padding-left: 25%;
+  }
+  .course-top{
+    padding-top: 2%;
   }
   
   .course1{
@@ -202,56 +260,42 @@
   }
 
   
+/* アクセス */
 
-
-  /* 診療時間 フッター*/
-  thead, tbody, tfoot, tr, td, th{
-    border-width: 1px;
-  }
-  .signboard{
+/* 施術の流れ */
+.flow{
+  margin: auto;
+}
+.flow-top{
+  text-align: center;
+  padding-top: 2%;
+}
+.flow-top p{
     margin: auto;
-    width: 350px;
-    height: 200px;
-  }
-  .signboard1{
-    font-size: 20px;
-  }
-  .signboard2{
-    background: #0f2e84 !important;
-  }
-  .th-white-str{
-    color: #fff;
-  }
-  
-  .footerflex{
-    display: flex;
-    margin: auto;
-    padding-left: 25%;
-    background-color: papayawhip;
-    border: solid;
-  }
-  .footer{
-    margin-top: 5%;
-  }
-  .footer li{
-    list-style: none;
-  }
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 15px;
+    width: 50%;
+}
 
-  .footer1 li{
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
-  .footer2{
-    padding-left: 13%;
-  }
+.flow-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+.monsin{
+  width: 280px;
+  text-align: center;
+  margin:3%;
+  background: antiquewhite;
+}
 
-  .footer-d{
-    background: #0f2e84 !important;
-    color: #fff;
-    border-radius :8px;/*角の丸み*/
-    box-shadow :0px 0px 5px silver;/*5px=影の広がり具合*/
-    padding: 0.5em 0.5em 0.5em 2em;
-    line-height: 1.5;
-    padding: 0.2em 0;
-  }
+.number{
+  width: 50px;
+  height: 50px;
+}
+.flowimg{
+  width: 150px;
+  height: 150px;
+}
+
   

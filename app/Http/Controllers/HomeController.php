@@ -55,5 +55,16 @@ class HomeController extends Controller
     {
         return view('access');
     }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function flow()
+    {
+        return view('flow');
+    }
+
 }
 

@@ -32,7 +32,7 @@ Route::post('reserve', [ReserveController::class, 'store']);
 
 
 
-// 案内画面
+// スタッフ紹介
 Route::get('/guide', [App\Http\Controllers\HomeController::class, 'guide'])->name('guide');
 // 施術コース
 Route::get('/course', [App\Http\Controllers\HomeController::class, 'course'])->name('course');
@@ -40,6 +40,8 @@ Route::get('/course', [App\Http\Controllers\HomeController::class, 'course'])->n
 Route::get('/price', [App\Http\Controllers\HomeController::class, 'price'])->name('price');
 //アクセス
 Route::get('/access', [App\Http\Controllers\HomeController::class, 'access'])->name('access');
+//施術の流れ
+Route::get('/flow', [App\Http\Controllers\HomeController::class, 'flow'])->name('flow');
 
 //以下マルチログイン
 Auth::routes();
