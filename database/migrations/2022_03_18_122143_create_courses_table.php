@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('detail')->comment('コース内容');
             $table->unsignedBigInteger('time')->comment('コース時間');
             $table->unsignedBigInteger('price')->comment('コース料金');
+            $table->timestamps();
         });
     }
 
