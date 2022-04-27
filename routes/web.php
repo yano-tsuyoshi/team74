@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\ReserveController;
 use App\Http\Controllers\ReserveListController;
-use App\Http\Controllers\StaffController;
 use App\Http\Controllers\CourseController;
 
 /*
@@ -39,7 +38,6 @@ Route::post('/staffEdit',[StaffController::class,'staffEdit']);
 
 //管理者削除画面
 Route::get('/staffDelete/{id}',[StaffController::class,'staffDelete']);
-
 
 //コース登録
 Route::get('courses/course_top',[CourseController::class,'top'])->name('top');
