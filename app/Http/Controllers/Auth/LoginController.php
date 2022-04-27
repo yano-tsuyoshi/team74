@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo ='/register/home';
 
     /**
      * Create a new controller instance.
@@ -64,7 +64,7 @@ class LoginController extends Controller
             return $this->sendLockoutResponse($request);
         }
 
-        if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+        if (Auth::guard('admin')->attempt(['name' => $request->name, 'password' => $request->password], $request->get('remember'))) {
             return redirect()->intended('/admin');
         }
 
