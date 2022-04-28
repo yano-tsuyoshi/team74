@@ -166,7 +166,7 @@
                             <label for="course_{{ $course->id }}" class="btn-select">
                                 <span id="name_course_{{ $course->id }}">{{ $course->name }}&nbsp;{{ $course->time }}分</span>
                             </label>
-                            <p id="price_course_{{ $course->id }}">{{ $course->price }}円</p>
+                            <p id="price_course_{{ $course->id }}"><b>{{ $course->price }}円</b></p>
                             <p>{{ $course->detail }}</p>
                         </div>
                         @endforeach
