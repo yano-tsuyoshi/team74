@@ -52,12 +52,9 @@ Route::post('/courseEdit',[CourseController::class,'courseEdit']);
 //コース削除画面
 Route::get('/courseDelete/{id}',[CourseController::class,'courseDelete']);
 
-// 予約登録画面
+// 予約登録画面（西田）
 Route::get('user', [ReserveController::class, 'show']);
-// Route::get('staff', [ReserveController::class, 'selectStaff']);
-// Route::get('course', [ReserveController::class, 'selectCourse']);
-Route::get('reserve', [ReserveController::class, 'index']);
-Route::post('reserve', [ReserveController::class, 'store']);
+Route::post('reserve', [ReserveController::class, 'reserveDataStore']);
 
 // ユーザー用予約表示画面（西田）
 Route::get('reserve_show', [ReserveListController::class, 'userDataShow']);
