@@ -158,23 +158,31 @@
   
 
   /* 施術料金画面 */
-  .course{
-    padding-left: 25%;
-  }
-  .course-top{
-    padding-top: 2%;
-  }
-  
-  .course1{
-    display: flex;
+
+  .course_top{
     margin: auto;
-    font-size: 30px;
   }
 
-  .course2{
-    display: flex;
-    margin: auto;
-    font-size: 30px;
+  .course_inner{
+    text-align: center;
+    padding: 40px;
+  }
+    
+  .table_table-bordered{
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .course_bottom{
+    text-align: center;
+  }
+  
+  .course_img{
+    width: 220px;
+    height: 200px;
+  }
+  .course_bottom p{
+    text-align: center;
+    padding-top: 15px;
   }
 
 

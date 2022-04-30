@@ -17,9 +17,9 @@ use App\Http\Controllers\CourseController;
 */
 
 // ホーム画面
-Route::get('/top', function () {
+Route::get('/', function () {
     return view('teams/index');
-})->name('top');
+})->name('welcame');
 
 
 

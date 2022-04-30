@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Course;
+use App\Models\Staff;
 
 class HomeController extends Controller
 {
@@ -33,7 +35,13 @@ class HomeController extends Controller
      */
     public function guide()
     {
-        return view('guide');
+        // return view('guide');
+        $staff = Staff::all();
+        $intyou = Staff::find(1);
+        $staffA = Staff::find(2);
+        $staffB = Staff::find(3);
+       
+        return view('guide',compact('staff','intyou','staffA','staffB'));
     }
 
     /**
@@ -43,7 +51,10 @@ class HomeController extends Controller
      */
     public function course()
     {
-        return view('course');
+        //return view('course');
+        $course = Course::all();
+        
+        return view('course',compact('course'));
     }
 
     /**
@@ -66,5 +77,14 @@ class HomeController extends Controller
         return view('flow');
     }
 
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function welcame()
+    {
+        return view('welcame');
+    }
 }
 
