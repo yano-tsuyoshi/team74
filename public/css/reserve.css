@@ -102,12 +102,12 @@ select {
 
 .btn-time:hover {
     cursor: pointer;
-    background-color: #e1e1e1;
+    background-color: #e3eeff;
 }
 
 .btn-time:active {
     cursor: pointer;
-    background-color: #e1e1e1;
+    background-color: #e3eeff;
 }
 
 .visually-hidden:checked+.btn-time {
