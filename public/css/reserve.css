@@ -19,6 +19,7 @@ body {
 .top-title {
     font-size: 24px;
     text-align: center;
+    margin-bottom: 40px;
 }
 
 /* Parts */
@@ -155,7 +156,7 @@ select {
 
 .input-area {
     margin: 0px auto;
-    margin-bottom: 16px;
+    margin-bottom: 30px;
     width: 610px;
 }
 
