@@ -186,7 +186,7 @@
                 </div>
                 <div class="input-area">
                     <div class="btn-box">
-                        <button class="js-modal-open btn btn-primary" href="" data-target="confirmModal">予約内容を確認する</button>
+                        <button class="js-modal-open btn btn-primary" href="" data-target="confirmModal">内容を確認する</button>
                     </div>
                 </div>
 
