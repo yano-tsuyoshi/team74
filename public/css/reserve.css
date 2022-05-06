@@ -64,7 +64,7 @@ select {
 
 .date-time-area {
     display: flex;
-    
+
 }
 
 .date-picker {
@@ -209,11 +209,12 @@ select {
 .confirm {
     font-size: 18px;
     margin-bottom: 9px;
-    max-width: 400px;
+    max-width: 450px;
 }
 
 .confirm-right {
     text-align: right;
     right: 0;
     font-weight: 500;
+    overflow-wrap: break-word;
 }
