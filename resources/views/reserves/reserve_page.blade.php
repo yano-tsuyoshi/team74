@@ -31,7 +31,7 @@
 <body>
     <div class="container">
         <div class="form-group">
-            <h1 class="top-title">予約フォーム</h1>
+            <h1>予約フォーム</h1>
             <form method="POST" action="{{ url('reserve') }}">
                 {{ csrf_field() }}
                 <div class="input-area">
