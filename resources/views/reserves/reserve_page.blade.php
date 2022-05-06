@@ -15,7 +15,7 @@
 
     <script>
         $(function() {
-            var dateFormat = 'y-m-d';
+            var dateFormat = 'yy-mm-dd';
             $("#datepicker").datepicker({
                 dateFormat: dateFormat,
                 minDate: 0,
@@ -27,8 +27,6 @@
         });
     </script>
 </head>
-
-<!-- 3. 時間あるなら予約データ編集・削除機能 -->
 
 <body>
     <div class="container">

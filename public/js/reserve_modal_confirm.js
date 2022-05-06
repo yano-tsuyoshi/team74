@@ -25,12 +25,6 @@ $(function () {
 
             var modal = $(this);
 
-            // var year = date.getFullYear();
-            // var month = date.getMonth() + 1;
-            // var day = date.getDate();
-
-            // date_view = (year + '年' + month + '月' + day + '日');
-
             // フォーム入力データをモーダル確認画面に表示
             $('#date_confirm').text(date);
             $('#time_confirm').text(time);
