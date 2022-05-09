@@ -22,10 +22,6 @@ Route::get('/top', function () {
     return view('teams/index');
 })->name('top');
 
-// 予約登録画面（西田）
-Route::get('reserve', [ReserveController::class, 'reservePageShow']);
-Route::post('reserve', [ReserveController::class, 'reserveDataStore']);
-
 //管理者登録画面
 Route::get('staffs/top',[StaffController::class,'top'])->name('top');
 
@@ -53,13 +49,8 @@ Route::post('/courseEdit',[CourseController::class,'courseEdit']);
 Route::get('/courseDelete/{id}',[CourseController::class,'courseDelete']);
 
 // 予約登録画面（西田）
-Route::get('user', [ReserveController::class, 'show']);
+Route::get('reserve', [ReserveController::class, 'reservePageShow']);
 Route::post('reserve', [ReserveController::class, 'reserveDataStore']);
-
-// ユーザー用予約表示画面（西田）
-Route::get('reserve_show', [ReserveListController::class, 'userDataShow']);
-Route::get('reserve_show', [ReserveListController::class, 'reserveShow']);
-Route::get('reserve_show', [ReserveListController::class, 'reserveIndex']);
 
 // 案内画面
 Route::get('/guide', [App\Http\Controllers\HomeController::class, 'guide'])->name('guide');
