@@ -4,78 +4,35 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Staff;
 use App\Models\Course;
+use App\Models\Staff;
 use App\Models\Reserve;
 
 use Facade\FlareClient\Http\Response;
 
 class ReserveController extends Controller
 {
-    // 予約一覧表示
-    // public function list(Request $request)
-    // {
-    //     return view('reserves\reserve_list');
-    // }
-
-    // 予約ページ表示
-    public function index(Request $request)
-    {
-        $user = User::first(); // テスト
-        // $user = \Auth::user(); // userデータはAuthでゲットするのがセオリー
-        // $user = User::select('id', 'name')->find($id);
-
-        // $staff = Staff::first();
-        // $course = Course::first();
-        return view('reserves\reserve_page', [
-            'user' => $user,
-            // 'staff' => $staff,
-            // 'course' => $course,
-        ]);
-    }
-
     /**
-     * ユーザーID・ユーザー名を1件取得
-     * 
+     * 予約ページ表示・ユーザー情報1件取得・コース一覧とスタッフ一覧取得
+     *
      * @param Request $request
      * @return Response
      */
-    // public function show(Request $request, $id)
-    // {
-    //     $user = User::select('id', 'name')->find($id);
-    //     dd($user);
-    //     return view('reserves\reserve_page', [
-    //         'user' => $user,
-    //     ]);
-    // }
+    public function reservePageShow(Request $request)
+    {
+        // $user = \Auth::user(); // userデータはAuthでゲットするのがセオリー
+        // $user = User::select('id', 'asc')->find($id);
 
-    // /**
-    //  * スタッフ一覧を取得
-    //  * 
-    //  * @param Request $request
-    //  * @return Response
-    //  */
-    // public function selectStaff(Request $request, $id)
-    // {
-    //     $staff = Staff::select('name')->find($id);
-    //     return view('reserves\reserve_page', [
-    //         'id' => $staff,
-    //     ]);
-    // }
+        $user = User::first(); // テスト
+        $courses = Course::orderBy('id', 'asc')->get();
+        $staffs = Staff::orderBy('id', 'asc')->get();
 
-    //     /**
-    //  * コース一覧を取得
-    //  * 
-    //  * @param Request $request
-    //  * @return Response
-    //  */
-    // public function selectCourse(Request $request, $id)
-    // {
-    //     $course_name = Course::select('course_name')->find($id);
-    //     return view('reserves\reserve_page', [
-    //         'id' => $course_name,
-    //     ]);
-    // }
+        return view('reserves\reserve_page', [
+            'user' => $user,
+            'courses' => $courses,
+            'staffs' => $staffs,
+        ]);
+    }
 
     /**
      * 予約データ登録
@@ -83,26 +40,27 @@ class ReserveController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function store(Request $request)
+    public function reserveDataStore(Request $request)
     {
-
         $this->validate($request, [
-            'detail' => 'required|max:1000',
+            'date' => 'required',
+            'time' => 'required',
+            'course_id' => 'required',
+            'staff_id' => 'required',
+            'detail' => 'max:1000',
         ]);
 
         // 予約データ作成
         Reserve::create([
             'user_id' => $request->user_id,
-            'staff_id' => $request->staff_id,
-            'course_id' => $request->course_id,
             'name' => $request->name,
-            'staff' => $request->staff,
             'date' => $request->date,
             'time' => $request->time,
-            'course' => $request->course,
+            'course_id' => $request->course_id,
+            'staff_id' => $request->staff_id,
             'detail' => $request->detail,
         ]);
 
-        return redirect('/');
+        return redirect('top');
     }
 }

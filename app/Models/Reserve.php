@@ -9,6 +9,6 @@ class Reserve extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id', 'user_id', 'staff_id', 'course_id', 'name', 'staff', 'date', 'time', 'course', 'detail'];
+    protected $fillable = ['id', 'user_id', 'name', 'date', 'time', 'course_id', 'staff_id', 'detail'];
     public $timestamps = true;
 }

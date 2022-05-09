@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\ReserveController;
+use App\Http\Controllers\ReserveListController;
 use App\Http\Controllers\CourseController;
 
 /*
@@ -21,8 +22,6 @@ Route::get('/top', function () {
     return view('teams/index');
 })->name('top');
 
-
-
 //管理者登録画面
 Route::get('staffs/top',[StaffController::class,'top'])->name('top');
 
@@ -35,7 +34,6 @@ Route::post('/staffEdit',[StaffController::class,'staffEdit']);
 
 //管理者削除画面
 Route::get('/staffDelete/{id}',[StaffController::class,'staffDelete']);
-
 
 //コース登録
 Route::get('courses/course_top',[CourseController::class,'top'])->name('top');
@@ -50,24 +48,9 @@ Route::post('/courseEdit',[CourseController::class,'courseEdit']);
 //コース削除画面
 Route::get('/courseDelete/{id}',[CourseController::class,'courseDelete']);
 
-
-
-
-
-
-
-
-// 予約登録画面
-Route::get('user', [ReserveController::class, 'show']);
-// Route::get('staff', [ReserveController::class, 'selectStaff']);
-// Route::get('course', [ReserveController::class, 'selectCourse']);
-Route::get('reserve', [ReserveController::class, 'index']);
-Route::post('reserve', [ReserveController::class, 'store']);
-
-// 予約一覧画面
-// Route::get('reserve', [ReserveController::class, 'list']);
-
-
+// 予約登録画面（西田）
+Route::get('reserve', [ReserveController::class, 'reservePageShow']);
+Route::post('reserve', [ReserveController::class, 'reserveDataStore']);
 
 // 案内画面
 Route::get('/guide', [App\Http\Controllers\HomeController::class, 'guide'])->name('guide');
@@ -92,5 +75,3 @@ Route::post('/register/admin', [App\Http\Controllers\Auth\RegisterController::cl
 Route::post('/register_validator', [App\Http\Controllers\Auth\RegisterController::class, 'registerValidator']);
 
 Route::view('/admin', 'admin')->middleware('auth:admin')->name('admin-home');
-
-
