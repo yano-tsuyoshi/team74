@@ -69,7 +69,7 @@ Route::get('/course', [App\Http\Controllers\HomeController::class, 'course'])->n
 Route::get('/price', [App\Http\Controllers\HomeController::class, 'price'])->name('price');
 
 //以下マルチログイン
-// Auth::routes();
+Auth::routes();
 // ユーザー側 一般画面
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
