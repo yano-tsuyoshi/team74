@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+/* Common */
+
+.alert {
+    text-align: center;
+}
+
+body {
+    margin: 0 auto;
+}
+
+.container {
+    height: fit-content;
+    font-weight: initial;
+}
+
+.form-group {
+    margin: 32px auto;
+    display: block;
+}
+
+.h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Parts */
+
+select {
+    border: 1px solid #242424;
+}
+
+.btn-primary .btn-secondary {
+    width: fit-content;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-box .btn-primary {
+    margin-left: 16px;
+}
+
+.btn-box .btn:first-child {
+    margin-left: 0;
+}
+
+/* Reserve Page */
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+/* Date */
+
+.date-time-area {
+    display: flex;
+
+}
+
+.date-picker {
+    justify-content: center;
+}
+
+.date-picker tbody * {
+    height: 65px;
+    text-align: center;
+}
+
+.ui-datepicker-inline {
+    width: 450px;
+}
+
+.ui-datepicker-inline .a {
+    text-align: center;
+    vertical-align: center;
+}
+
+/* Time */
+
+.table-time {
+    margin-left: 10px;
+    margin-top: -2px;
+}
+
+.btn-time {
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    width: fit-content;
+    padding: 8px 8px;
+    margin: 2px;
+}
+
+.btn-time:hover {
+    cursor: pointer;
+    background-color: #e3eeff;
+}
+
+.btn-time:active {
+    cursor: pointer;
+    background-color: #e3eeff;
+}
+
+.visually-hidden:checked+.btn-time {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+/* Course */
+
+.btn-select {
+    border: 2px solid #0d6efd;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 8px 12px;
+    margin: 2px;
+}
+
+.btn-select:hover {
+    cursor: pointer;
+    background-color: #e3eeff;
+}
+
+.visually-hidden:checked+.btn-select {
+    background-color: #0d6efd;
+    color: #fff;
+}
+
+.btn-lineup.staff {
+    display: flex;
+}
+
+.btn-select-grp {
+    display: flex;
+}
+
+.btn-select-grp p {
+    margin: auto 0;
+    margin-left: 10px;
+}
+
+.form-index {
+    margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.input-area {
+    margin: 0px auto;
+    margin-bottom: 30px;
+    width: 610px;
+}
+
+.input-area:last-child {
+    text-align: center;
+}
+
+.textarea-large {
+    border: 1px solid black;
+    width: 600px;
+    height: 300px;
+    vertical-align: top;
+    overflow-wrap: break-word;
+}
+
+/* Modal - Confirm */
+
+.modal__bg {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+
+.modal__content {
+    text-align: center;
+    background: #fff;
+    color: #242424;
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal__content .d-block {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 4px 4px 6px rgb(0 0 0);
+}
+
+/* Confirm Table */
+
+.reserve-confirm {
+    margin: 32px auto;
+}
+
+.confirm {
+    font-size: 18px;
+    margin-bottom: 9px;
+    max-width: 450px;
+    overflow-wrap: break-word;
+}
+
+.confirm-right {
+    text-align: right;
+    right: 0;
+    font-weight: 500;
+    overflow-wrap: break-word;
+}
