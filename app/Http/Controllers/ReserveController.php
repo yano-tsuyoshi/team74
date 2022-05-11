@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Staff;
 use App\Models\Course;
 use App\Models\Reserve;
+use Illuminate\Support\Facades\Auth;
 
 use Facade\FlareClient\Http\Response;
 
@@ -21,13 +22,15 @@ class ReserveController extends Controller
     // 予約ページ表示
     public function index(Request $request)
     {
-        $user = User::first(); // テスト
+        $user = Auth::user();
+        // $user = User::first(); // テスト
+        // dd($user);
         // $user = \Auth::user(); // userデータはAuthでゲットするのがセオリー
         // $user = User::select('id', 'name')->find($id);
 
         // $staff = Staff::first();
         // $course = Course::first();
-        return view('reserves\reserve_page', [
+        return view('reserves.reserve_page', [
             'user' => $user,
             // 'staff' => $staff,
             // 'course' => $course,

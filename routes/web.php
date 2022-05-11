@@ -22,7 +22,6 @@ Route::get('/', function () {
 })->name('welcame');
 
 
-
 //管理者登録画面
 Route::get('staffs/top',[StaffController::class,'top'])->name('top');
 
@@ -79,6 +78,8 @@ Route::get('/price', [App\Http\Controllers\HomeController::class, 'price'])->nam
 Route::get('/access', [App\Http\Controllers\HomeController::class, 'access'])->name('access');
 //施術の流れ
 Route::get('/flow', [App\Http\Controllers\HomeController::class, 'flow'])->name('flow');
+
+
 
 //以下マルチログイン
 Auth::routes();

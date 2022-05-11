@@ -104,12 +104,11 @@
         <div class="main">
             <header id="header">
                 <h1 class="site-title">
-                    <a href="welcome"><img class="rogoimg" src="/images/sinkyurogo.png"></a>
+                    <a href="/"><img class="rogoimg" src="/images/sinkyurogo.png"></a>
                 </h1>
 
                 <nav id="navi">
                     <ul class="nav-menu">
-                        <!-- <li> <a href="top">なんとか鍼灸院</a></li> -->
                         <li> <a href="guide">スタッフ紹介</a></li>
                         <li> <a href="flow">施術の流れ</a></li>
                         <li> <a href="course">施術コース・料金</a></li>
@@ -125,11 +124,6 @@
                     </ul>
                 </nav>
 
-                <!-- <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div> -->
 
                 <div id="mask"></div>
 
