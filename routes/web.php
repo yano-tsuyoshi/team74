@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\ReserveController;
+use App\Http\Controllers\ReserveListController;
 use App\Http\Controllers\CourseController;
 
 /*
@@ -49,7 +50,9 @@ Route::post('/courseEdit',[CourseController::class,'courseEdit']);
 //コース削除画面
 Route::get('/courseDelete/{id}',[CourseController::class,'courseDelete']);
 
-
+// 予約登録画面（西田）
+Route::get('reserve', [ReserveController::class, 'reservePageShow']);
+Route::post('reserve', [ReserveController::class, 'reserveDataStore']);
 
 
 
