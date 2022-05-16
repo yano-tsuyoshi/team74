@@ -10,5 +10,6 @@ class Reserve extends Model
     use HasFactory;
 
     protected $fillable = ['id', 'user_id', 'name', 'date', 'time', 'course_id', 'staff_id', 'detail'];
+    protected $table="reserves";
     public $timestamps = true;
 }

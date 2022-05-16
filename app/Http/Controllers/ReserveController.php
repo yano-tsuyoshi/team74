@@ -63,4 +63,10 @@ class ReserveController extends Controller
 
         return redirect('top');
     }
+
+    public function top(){
+        $reserve = Reserve::all();
+        return view('reserves/list_top',compact('reserve'));
+         }
+
 }
