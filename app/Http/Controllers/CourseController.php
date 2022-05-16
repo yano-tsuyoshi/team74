@@ -22,7 +22,21 @@ class CourseController extends Controller
     }
 
 
-    public function courseRegister(Request $request){
+    public function courseRegister(Request $request)
+    {
+        $inputs=$request->validate([
+            'name' => 'required',
+            'detail' =>'required',
+            'time' => 'numeric',
+            'price' => 'numeric',
+
+        ],
+        [
+            'name.required' => 'コース名が入力されていません。',
+            'detail.required'  => '施術内容が入力されていません。',
+            'time.numeric' => '施術時間は数字で入力して下さい。',
+            'price.numeric' => '料金は数字で入力して下さい。',
+        ]);
 
         $course = new Course();
     

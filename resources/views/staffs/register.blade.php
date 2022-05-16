@@ -25,13 +25,17 @@
 
     <div style="width:500px; text-align:center; margin:100px auto;">
         <h4>管理者登録</h4>
+    </div>    
         <form action="/staffRegister" method="post">
          @csrf
-         <div class="form-group">
-            <input class="form-control mt-5" type="text" name="name" placeholder="名前">
+            <div class="form-group row justify-content-center">
+                <div class="col-4">
+                    <label class="mt-5">名前：</label>
+                    <input class="form-control mt-2" type="text" name="name" placeholder="名前">
             
-            <button type="submit" class="btn btn-secondary mt-3 ">登録</button>
-            </div>
+                    <button type="submit" class="btn btn-secondary mt-3 ">登録</button>
+                </div>
+            </div>   
         </form>   
 
 

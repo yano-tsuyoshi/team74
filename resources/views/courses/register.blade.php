@@ -25,22 +25,39 @@
 
     <div style="width:500px; text-align:center; margin:100px auto;">
         <h4>コース登録</h4>
+    </div>
+        @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+    
         <form action="/courseRegister" method="post">
             @csrf
-            <div class="form-group">
-                <input class="form-control mt-5" type="text" name="name" placeholder="コース名">
-                <input class="form-control mt-5" type="text" name="detail" placeholder="詳細">
-                <input class="form-control mt-5" type="text" name="time" placeholder="時間">
-                <input class="form-control mt-5" type="text" name="price" placeholder="料金">
-            
-                <button type="submit" class="btn btn-secondary mt-3 ">登録</button>
+            <div class="form-group row justify-content-center">
+                <div class="col-4">
+                    <label class="mt-5">コース名：</label>
+                    <input class="form-control mt-2" type="text" name="name" placeholder="コース名">
+                    <label class="mt-4">施術内容：</label>
+                    <input class="form-control mt-2" type="text" name="detail" placeholder="施術内容">
+                    <label class="mt-4">施術時間：</label>
+                    <input class="form-control mt-2" type="text" name="time" placeholder="施術時間">
+                    <label class="mt-4">料金：</label>
+                    <input class="form-control mt-2" type="text" name="price" placeholder="料金">
+                    <button type="submit" class="btn btn-secondary mt-4 ">登録</button>
+                </div>
             </div>
+                 
         </form>   
 
-
-
-
-
     </div>
+
+
+
+    
 </body>
 </html>
