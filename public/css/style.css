@@ -1,18 +1,15 @@
-body {
-    color: #121212;
-  }
-  
   a {
     color: #121212;
-    /* text-decoration: none; */
   }
-  img {
+  .rogoimg {
       width: 150px;
       height: 150px;
       vertical-align: bottom;
-    
   }
+
   .topimg{
+      width: 500px;
+      height: 500px;
       text-align: center;
   }
 
@@ -27,13 +24,13 @@ body {
   }
   
   /* サイドメニューの横幅分だけ左にmarginをとる */
-  .container {
+  .toppage{
     margin: auto;
   }
   
-  .container h1 {
+  .toppage h1 {
       text-align: center;
-      margin-top: 5%;
+      margin-top: 3%;
     }
   
   .main{
@@ -54,7 +51,6 @@ body {
   }
   .site-title {
     width: 200px;
-    /* line-height: 1px; */
     margin-bottom: 30px;
   }
   .site-title a {
@@ -91,7 +87,7 @@ body {
     padding: 0px 15px 30px 15px;
     /* padding: 0px 50px 30px 45px; */
     position: fixed;
-    top: 57px;
+    top: 0;
     /* 画面の高さが低くてメニューが隠れてしまった場合に、縦スクロールが出るよう設定 */
     overflow-y: auto;
     background-color: aqua;
@@ -106,20 +102,208 @@ body {
     padding: 8px 0;
   }
 
-  
-  .course{
-    padding-left: 25%;
+  /* 診療時間 フッター*/
+  thead, tbody, tfoot, tr, td, th{
+    border-width: 1px;
+  }
+  .signboard{
+    margin: auto;
+    width: 350px;
+    height: 200px;
+  }
+  .signboard1{
+    font-size: 20px;
+    text-align: center;
+  }
+  .signboard2{
+    background: #0f2e84 !important;
+    
+  }
+  .th-white-str{
+    color: #fff;
   }
   
-  .course1{
+  .footerflex{
     display: flex;
+    flex-wrap: wrap;
     margin: auto;
-    font-size: 30px;
+    padding-left: 25%;
+    background-color: papayawhip;
+    border: solid;
+  }
+  .footer{
+    margin-top: 5%;
+  }
+  .footer li{
+    list-style: none;
   }
 
-  .course2{
-    display: flex;
-    margin: auto;
-    font-size: 30px;
+  .footer1 li{
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
+  .footer2{
+    padding-left: 13%;
+  }
+
+  .footer-d{
+    background: #0f2e84 !important;
+    color: #fff;
+    border-radius :8px;/*角の丸み*/
+    box-shadow :0px 0px 5px silver;/*5px=影の広がり具合*/
+    padding: 0.5em 0.5em 0.5em 2em;
+    line-height: 1.5;
+    padding: 0.2em 0;
+  }
+  
+
+  /* 施術料金画面 */
+
+  .course_top{
+    margin: auto;
+  }
+
+  .course_inner{
+    text-align: center;
+    padding: 40px;
+  }
+    
+  .table_table-bordered{
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .course_bottom{
+    text-align: center;
+  }
+  
+  .course_img{
+    width: 220px;
+    height: 200px;
+  }
+  .course_bottom p{
+    text-align: center;
+    padding-top: 15px;
+  }
+
+
+  /* スタッフ紹介画面 */
+  .guide{
+    text-align: center;
+  }
+  .guide h1{
+    padding-top: 2%;
+  }
+  .guide b{
+    font-size: 20px;
+  }
+
+  .intyouimg{
+    width: 250px;
+    height: 250px;
+  }
+
+  .flex{
+    margin: 5% 10%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+  .flex .textarea{
+    width: 50%;
+    }
+
+  .flex .imgarea{
+      width: 50%;
+      padding-left: 5%;
+  }
+
+  .textarea{
+    position: relative;
+    padding:0.25em 1em;
+    width: 50%;
+  }
+
+  .textarea:before,.textarea:after{ 
+      content:'';
+      width: 20px;
+      height: 30px;
+      position: absolute;
+      display: inline-block;
+  }
+  .textarea:before{
+      border-left: solid 1px #5767bf;
+      border-top: solid 1px #5767bf;
+      top:0;
+      left: 0;
+  }
+  .textarea:after{
+      border-right: solid 1px #5767bf;
+      border-bottom: solid 1px #5767bf;
+      bottom:0;
+      right: 0;
+  }
+  .textarea p {
+      margin: 0; 
+      padding: 0;
+  }
+
+  .staff{
+    margin: 5% 10%;
+  }
+  .flexA{
+    display: flex;
+  }
+  .imgareaA{
+    width: 50%;
+  }
+  
+
+  .flexB{
+    display: flex;
+    padding-top: 5%;
+  }
+
+  .imgareaB{
+    width: 50%;
+  }
+
+  
+/* アクセス */
+
+/* 施術の流れ */
+.flow{
+  margin: auto;
+}
+.flow-top{
+  text-align: center;
+  padding-top: 2%;
+}
+.flow-top p{
+    margin: auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-size: 15px;
+    width: 50%;
+}
+
+.flow-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+.monsin{
+  width: 280px;
+  text-align: center;
+  margin:3%;
+  background: antiquewhite;
+}
+
+.number{
+  width: 50px;
+  height: 50px;
+}
+.flowimg{
+  width: 150px;
+  height: 150px;
+}
+
   

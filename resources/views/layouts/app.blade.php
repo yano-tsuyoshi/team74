@@ -7,21 +7,18 @@
 
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
     <!-- <link href="{{ asset('css/teams.css') }}" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href="/css/teams.css"> -->
 
     <meta charset="utf-8">
-    <title>明るいHOUSE</title>
-    <meta name="description" content="テキストテキストテキストテキストテキストテキスト">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>なんとか鍼灸院</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <!-- CSS Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- CSS -->
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reserve.css">
     <!-- JS -->
@@ -106,48 +103,99 @@
 
 
 
-    <div class="main">
-        <header id="header">
-            <h1 class="site-title">
-                <a href="top"><img src="/images/sinkyurogo.png"></a>
-            </h1>
 
-            <nav id="navi">
-                <ul class="nav-menu">
-                    <!-- <li> <a href="top">なんとか鍼灸院</a></li> -->
-                    <li> <a href="guide">鍼灸院詳細</a></li>
-                    <li> <a href="course">施術コース・料金</a></li>
-                    <li> <a href="reserve">予約</a></li>
+        <div class="main">
+            <header id="header">
+                <h1 class="site-title">
+                    <a href="/"><img class="rogoimg" src="/images/sinkyurogo.png"></a>
+                </h1>
 
-                </ul>
-                <ul class="nav-sns">
-                    <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
-                    <li><a href="https://www.facebook.com/" target="_blank">facebook</a></li>
-                    <li><a href="https://www.instagram.com/" target="_blank">instagram</a></li>
-                </ul>
-            </nav>
+                <nav id="navi">
+                    <ul class="nav-menu">
+                        <li> <a href="guide">スタッフ紹介</a></li>
+                        <li> <a href="flow">施術の流れ</a></li>
+                        <li> <a href="course">施術コース・料金</a></li>
+                        <li> <a href="reserve">予約</a></li>
+                        <li> <a href="access">アクセス</a></li>
+                        <li> <a href="FAQ">FAQ</a></li>
+                        
+                    </ul>
+                    <ul class="nav-sns">
+                        <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank">facebook</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank">instagram</a></li>
+                    </ul>
+                </nav>
 
-            <!-- <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div> -->
 
             <div id="mask"></div>
 
-        </header>
-        <div class="dummysidebar">
 
-        </div>
-        @yield('content')
+            </header>
+            <div class="dummysidebar">
 
-    </div>
-
-    <!-- <main class="py-4">
+            </div>
             @yield('content')
-        </main> -->
+        </div>
+        
+        <div class="footerflex">
 
-    </div>
-</body>
+            <address class="footer">
+                <ul class="footer1">
+
+                    <li><span class="footer-d">ご予約優先制</span>
+
+                    <li><span class="footer-d">木曜休診</span> <span class="footer-d">往診できます</span></li>
+
+                </ul>
+                <p class="footer2">鍼灸保険取扱・鍼灸治療・手技療法<br>
+                    リウマチ・五十肩、腰痛症<br>神経痛・頚腕症候群</p>
+                <ul class="footer3">
+                    <li class="font-size-1">〒551-0000</li>
+                    <li class="font-size-1 mb-3">大阪府豊中市１−１−１</li>
+                    <li class="foot-i01"><a class="btn btn-sm btn-primary btn-pill transition-3d-hover" href="tel: //電話番号書く//" >電話:06-6666-3333</a></li>
+                </ul>
+            </address>
+
+            <table class="signboard">
+                <caption>※予約優先制※</caption>
+                <tbody class="signboard1">
+                    <tr class="signboard2">
+                        <th><span class="th-white-str">診療時間</span></th>
+                        <th><span class="th-white-str">月</span></th>
+                        <th><span class="th-white-str">火</span></th>
+                        <th><span class="th-white-str">水</span></th>
+                        <th><span class="th-white-str">木</span></th>
+                        <th><span class="th-white-str">金</span></th>
+                        <th><span class="th-white-str">土</span></th>
+                        <th><span class="th-white-str">日</span></th>
+                        <th><span class="th-white-str">祝</span></th>
+                    </tr>
+                    <tr>
+                        <td class="tal">9:00～12:00</td>
+                        <td>○</td>
+                        <td>○</td>
+                        <td>○</td>
+                        <td>-</td>
+                        <td>○</td>
+                        <td>○</td>
+                        <td>○</td>
+                        <td>○</td>
+                    </tr>
+                    <tr>
+                        <td class="tal">15:30～19:30</td>
+                        <td>○</td>
+                        <td>○</td>
+                        <td>○</td>
+                        <td>-</td>
+                        <td>○</td>
+                        <td>○</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
 
 </html>
