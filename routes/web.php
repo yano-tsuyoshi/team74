@@ -19,8 +19,8 @@ use App\Http\Controllers\CourseController;
 
 // ホーム画面
 Route::get('/', function () {
-    return view('teams/index');
-})->name('welcame');
+    return view('teams.index');
+})->name('welcome');
 
 
 //管理者登録画面
@@ -53,21 +53,6 @@ Route::get('/courseDelete/{id}',[CourseController::class,'courseDelete']);
 // 予約登録画面（西田）
 Route::get('reserve', [ReserveController::class, 'reservePageShow']);
 Route::post('reserve', [ReserveController::class, 'reserveDataStore']);
-
-
-
-
-
-
-// 予約登録画面
-Route::get('user', [ReserveController::class, 'show']);
-// Route::get('staff', [ReserveController::class, 'selectStaff']);
-// Route::get('course', [ReserveController::class, 'selectCourse']);
-Route::get('reserve', [ReserveController::class, 'index']);
-Route::post('reserve', [ReserveController::class, 'store']);
-
-// 予約一覧画面
-// Route::get('reserve', [ReserveController::class, 'list']);
 
 
 

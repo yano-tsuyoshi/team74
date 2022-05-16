@@ -78,15 +78,7 @@ class HomeController extends Controller
         return view('flow');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function reserve()
-    {
-        return view('reserve_page');
-    }
+   
 
 }
 

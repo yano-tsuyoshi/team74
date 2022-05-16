@@ -23,14 +23,14 @@ class ReserveController extends Controller
     {
 
         
-        $user = Auth::user();
+        // $user = Auth::user();
         // $user = User::first(); // テスト
         // dd($user);
 
         // $user = \Auth::user(); // userデータはAuthでゲットするのがセオリー
         // $user = User::select('id', 'asc')->find($id);
 
-        //$user = User::first(); // テスト
+        $user = User::first(); // テスト
         $courses = Course::orderBy('id', 'asc')->get();
         $staffs = Staff::orderBy('id', 'asc')->get();
 
@@ -71,6 +71,6 @@ class ReserveController extends Controller
             'detail' => $request->detail,
         ]);
 
-        return redirect('top');
+        return redirect('/');
     }
 }
