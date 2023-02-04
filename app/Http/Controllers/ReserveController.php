@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Course;
 use App\Models\Staff;
 use App\Models\Reserve;
+use Illuminate\Support\Facades\Auth;
 
 use Facade\FlareClient\Http\Response;
 
@@ -20,6 +21,12 @@ class ReserveController extends Controller
      */
     public function reservePageShow(Request $request)
     {
+
+        
+        // $user = Auth::user();
+        // $user = User::first(); // テスト
+        // dd($user);
+
         // $user = \Auth::user(); // userデータはAuthでゲットするのがセオリー
         // $user = User::select('id', 'asc')->find($id);
 
@@ -27,7 +34,10 @@ class ReserveController extends Controller
         $courses = Course::orderBy('id', 'asc')->get();
         $staffs = Staff::orderBy('id', 'asc')->get();
 
-        return view('reserves\reserve_page', [
+
+        // $staff = Staff::first();
+        // $course = Course::first();
+        return view('reserves.reserve_page', [
             'user' => $user,
             'courses' => $courses,
             'staffs' => $staffs,
@@ -61,12 +71,6 @@ class ReserveController extends Controller
             'detail' => $request->detail,
         ]);
 
-        return redirect('top');
+        return redirect('/');
     }
-
-    public function top(){
-        $reserve = Reserve::all();
-        return view('reserves/list_top',compact('reserve'));
-         }
-
 }

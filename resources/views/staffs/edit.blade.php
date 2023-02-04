@@ -22,23 +22,19 @@
 <body>
 <div style="width:500px; text-align:center; margin:100px auto;">
     <h4>編集</h4>
-</div>
     <form action="/staffEdit" method="post">
         @csrf
         <input class="form-control mt-5" type="text" name="id" value="{{$staff->id}}" hidden>
-            <div class="form-group row justify-content-center">
-                <div class="col-3">
-                    <label class="mt-5">名前：</label>
-                    <input class="form-control" type="text" name="name" value="{{$staff->name}}">
+        <div class="form-group">
+            <input class="form-control" type="text" name="name" value="{{$staff->name}}">
             
-                    <button type="submit" class="btn btn-secondary mt-3">編集</button>
+            <button type="submit" class="btn btn-secondary mt-3">編集</button>
+        </div>
+        <div class="form-group">
+            <a href="/staffDelete/{{$staff->id}}"><button type ="button" class="btn btn-secondary mt-2">削除</button></a>
+        </div>
 
-                    <div class="form-group">
-                        <a href="/staffDelete/{{$staff->id}}"><button type ="button" class="btn btn-secondary mt-3">削除</button></a>
-                    </div>
 
-                </div>
-            </div>
 
     </form>   
 
@@ -46,6 +42,6 @@
 
 
 
-
+</div>
 </body>
 </html>

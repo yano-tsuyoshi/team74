@@ -18,9 +18,10 @@ use App\Http\Controllers\CourseController;
 */
 
 // ホーム画面
-Route::get('/top', function () {
-    return view('teams/index');
-})->name('top');
+Route::get('/', function () {
+    return view('teams.index');
+})->name('welcome');
+
 
 //管理者登録画面
 Route::get('staffs/top',[StaffController::class,'top'])->name('top');
@@ -34,6 +35,7 @@ Route::post('/staffEdit',[StaffController::class,'staffEdit']);
 
 //管理者削除画面
 Route::get('/staffDelete/{id}',[StaffController::class,'staffDelete']);
+
 
 //コース登録
 Route::get('courses/course_top',[CourseController::class,'top'])->name('top');
@@ -55,12 +57,20 @@ Route::get('reserves/list_top',[ReserveController::class,'top'])->name('top');
 Route::get('reserve', [ReserveController::class, 'reservePageShow']);
 Route::post('reserve', [ReserveController::class, 'reserveDataStore']);
 
-// 案内画面
+
+
+// スタッフ紹介
 Route::get('/guide', [App\Http\Controllers\HomeController::class, 'guide'])->name('guide');
 // 施術コース
 Route::get('/course', [App\Http\Controllers\HomeController::class, 'course'])->name('course');
 // 料金
 Route::get('/price', [App\Http\Controllers\HomeController::class, 'price'])->name('price');
+//アクセス
+Route::get('/access', [App\Http\Controllers\HomeController::class, 'access'])->name('access');
+//施術の流れ
+Route::get('/flow', [App\Http\Controllers\HomeController::class, 'flow'])->name('flow');
+
+
 
 
 
@@ -94,3 +104,5 @@ Route::post('/register/admin', [App\Http\Controllers\Auth\RegisterController::cl
 Route::post('/register_validator', [App\Http\Controllers\Auth\RegisterController::class, 'registerValidator']);
 
 Route::view('/admin', 'admin')->middleware('auth:admin')->name('admin-home');
+
+

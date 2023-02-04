@@ -2,13 +2,15 @@
 
 @section('content')
 
-    
-        <div class="container">
-            <h1>ようこそ!</h1>
-            <h1>なんとか鍼灸院へ</h1>
-                <div class="topimg">
-                    <img src="/images/harikyuu.png">
-                </div>
-        </div>     
+
+<div class="toppage">
+    <h1>ようこそ!</h1>
+    <h1>なんとか鍼灸院へ</h1>
+    <div >
+        <img class="topimg" src="/images/harikyuu.png">
+    </div>
+</div>
+
+
 
 @endsection

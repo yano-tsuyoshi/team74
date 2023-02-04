@@ -20,6 +20,10 @@ body {
     display: block;
 }
 
+.form-group h1{
+    padding-left: 30%;
+}
+
 .h1 {
     font-size: 24px;
     text-align: center;
