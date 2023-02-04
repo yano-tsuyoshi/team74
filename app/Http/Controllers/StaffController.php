@@ -25,12 +25,13 @@ class StaffController extends Controller
 
     public function staffRegister(Request $request){
 
+        $request->validate([
+            'name' => 'required',
+        ]);
+        
         $staff = new Staff();
         $staff->name = $request->name;			
         $staff->save();			
-
-        
-
         return redirect('staffs/top');
     }
 
@@ -39,7 +40,6 @@ class StaffController extends Controller
     public function edit(Request $request){
         
         $staff = Staff::where('id','=', $request->id)->first();
-        
         return view('staffs/edit')->with([
             'staff' =>$staff,
         ]);

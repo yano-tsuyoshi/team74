@@ -19,26 +19,29 @@
 
 </head>
  
-    <body>
-        <div style="width:500px; text-align:center; margin:100px auto;">
-            <h4>編集</h4>
-            <form action="/staffEdit" method="post">
-                @csrf
-                <input class="form-control mt-5" type="text" name="id" value="{{$staff->id}}" hidden>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="name" value="{{$staff->name}}">
-                    
-                    <button type="submit" class="btn btn-secondary mt-3">編集</button>
-                </div>
-                <div class="form-group">
-                    <a href="/staffDelete/{{$staff->id}}"><button type ="button" class="btn btn-secondary mt-2">削除</button></a>
-                </div>
-            </form>   
-
-
-
-
-
+<body>
+<div style="width:500px; text-align:center; margin:100px auto;">
+    <h4>編集</h4>
+    <form action="/staffEdit" method="post">
+        @csrf
+        <input class="form-control mt-5" type="text" name="id" value="{{$staff->id}}" hidden>
+        <div class="form-group">
+            <input class="form-control" type="text" name="name" value="{{$staff->name}}">
+            
+            <button type="submit" class="btn btn-secondary mt-3">編集</button>
         </div>
-    </body>
+        <div class="form-group">
+            <a href="/staffDelete/{{$staff->id}}"><button type ="button" class="btn btn-secondary mt-2">削除</button></a>
+        </div>
+
+
+
+    </form>   
+
+
+
+
+
+</div>
+</body>
 </html>

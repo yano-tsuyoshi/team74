@@ -50,6 +50,9 @@ Route::post('/courseEdit',[CourseController::class,'courseEdit']);
 //コース削除画面
 Route::get('/courseDelete/{id}',[CourseController::class,'courseDelete']);
 
+//予約一覧
+Route::get('reserves/list_top',[ReserveController::class,'top'])->name('top');
+
 // 予約登録画面（西田）
 Route::get('reserve', [ReserveController::class, 'reservePageShow']);
 Route::post('reserve', [ReserveController::class, 'reserveDataStore']);
@@ -68,6 +71,22 @@ Route::get('/access', [App\Http\Controllers\HomeController::class, 'access'])->n
 Route::get('/flow', [App\Http\Controllers\HomeController::class, 'flow'])->name('flow');
 
 
+
+
+
+
+
+
+
+// 予約登録画面
+//Route::get('user', [ReserveController::class, 'show']);
+// Route::get('staff', [ReserveController::class, 'selectStaff']);
+// Route::get('course', [ReserveController::class, 'selectCourse']);
+//Route::get('reserve', [ReserveController::class, 'index']);
+//Route::post('reserve', [ReserveController::class, 'store']);
+
+// 予約一覧画面
+// Route::get('reserve', [ReserveController::class, 'list']);
 
 //以下マルチログイン
 Auth::routes();
